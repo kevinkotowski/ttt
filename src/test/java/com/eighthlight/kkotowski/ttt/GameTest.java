@@ -1,14 +1,12 @@
 package com.eighthlight.kkotowski.ttt;
 
-import junit.framework.TestCase;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by kevinkotowski on 4/18/16.
  */
-public class GameTest extends TestCase {
+public class GameTest {
     public void testTest() throws Exception {
         Hello hello = new Hello();
         assertEquals(hello.getName(), "");
