@@ -28,7 +28,7 @@ public class BoardTest {
 
     @Test
     public void getSize() throws Exception {
-        assertEquals( this.board.getSize(), 9 );
+        assertEquals( 9, this.board.getSize() );
     }
 
     @Test
@@ -43,23 +43,23 @@ public class BoardTest {
 
     @Test(expected = RuntimeException.class)
     public void badPlacePosition() throws Exception {
-        board.setSquare( 9, Mark.PLAYER1 );
+        this.board.setSquare( 9, Board.Mark.PLAYER1 );
     }
 
     @Test(expected = RuntimeException.class)
     public void badPlaceMark() throws Exception {
-        board.setSquare( 0, Mark.AVAILABLE );
+        this.board.setSquare( 0, Board.Mark.AVAILABLE );
     }
 
     @Test
     public void setSquare() throws Exception {
-        assertTrue( board.setSquare( 0, Mark.PLAYER1 ) );
-        assertTrue( board.setSquare( 1, Mark.PLAYER2 ) );
-        assertTrue( board.setSquare( 2, Mark.PLAYER1 ) );
-        assertTrue( board.setSquare( 3, Mark.PLAYER2 ) );
-        assertTrue( board.setSquare( 4, Mark.PLAYER1 ) );
-        assertTrue( board.setSquare( 5, Mark.PLAYER2 ) );
-        assertTrue( board.setSquare( 6, Mark.PLAYER1 ) );
+        assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
+        assertTrue( this.board.setSquare( 1, Board.Mark.PLAYER2 ) );
+        assertTrue( this.board.setSquare( 2, Board.Mark.PLAYER1 ) );
+        assertTrue( this.board.setSquare( 3, Board.Mark.PLAYER2 ) );
+        assertTrue( this.board.setSquare( 4, Board.Mark.PLAYER1 ) );
+        assertTrue( this.board.setSquare( 5, Board.Mark.PLAYER2 ) );
+        assertTrue( this.board.setSquare( 6, Board.Mark.PLAYER1 ) );
 
         int length = this.board.getSize();
         List squares = this.board.get();
@@ -71,14 +71,9 @@ public class BoardTest {
 
     @Test
     public void getSquare() throws Exception {
-        assertTrue( board.setSquare( 0, Mark.PLAYER1 ) );
-
-
-        int length = this.board.getSize();
-        List squares = this.board.get();
-
-        for ( int x = 0; x < length; x++ ) {
-            System.out.println( "...BoardTest setSquare: " + x + ", " + squares.get(x) );
-        }
+        assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
+        assertEquals( Board.Mark.PLAYER1, board.getSquare( 0 ) );
+        assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER2 ) );
+        assertEquals( Board.Mark.PLAYER2, board.getSquare( 0 ) );
     }
 }

@@ -8,20 +8,29 @@ import java.util.List;
  */
 public class Board {
     private int size = 9;
-    private List squares = new ArrayList<Mark>(size);
+    private List<Mark> squares = new ArrayList<Mark>(size);
+    public enum Mark {
+        AVAILABLE,
+        PLAYER1,
+        PLAYER2
+    }
 
     public Board() {
-        for (int square = 0; square < this.getSize(); square++) {
-            this.squares.add(square, Mark.AVAILABLE);
+        for (int position = 0; position < this.getSize(); position++) {
+            this.squares.add(position, Mark.AVAILABLE);
         }
+    }
+
+    public List<Mark> get() {
+        return this.squares;
     }
 
     public int getSize() {
         return this.size;
     }
 
-    public List<Mark> get() {
-        return this.squares;
+    public Mark getSquare(int position) {
+        return this.squares.get(position);
     }
 
     public boolean setSquare(int position, Mark mark) {
@@ -33,10 +42,6 @@ public class Board {
 
         this.squares.set(position, mark);
         return true;
-    }
-
-    public Mark getSquare(int position) {
-        return this.squares.get(position);
     }
 
     private boolean validPosition(int position) {
