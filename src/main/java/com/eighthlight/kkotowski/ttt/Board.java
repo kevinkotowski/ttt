@@ -34,19 +34,23 @@ public class Board {
     }
 
     public boolean setSquare(int position, Mark mark) {
-        this.validPosition(position);
-
-        if ( (mark != Mark.PLAYER1) && (mark != Mark.PLAYER2) ) {
-            throw new RuntimeException("Must place PLAYER1 or PLAYER2.");
+        if ( this.availablePosition(position) ) {
+            if ( (mark != Mark.PLAYER1) && (mark != Mark.PLAYER2) ) {
+                throw new RuntimeException("Must place PLAYER1 or PLAYER2.");
+            }
+            this.squares.set(position, mark);
+            return true;
+        } else {
+            return false;
         }
-
-        this.squares.set(position, mark);
-        return true;
     }
 
-    private boolean validPosition(int position) {
+    private boolean availablePosition(int position) {
         if ( (position < -1) || (position > 8) ) {
             throw new RuntimeException("Must place in position 0-8");
+        }
+        if ( (this.squares.get(position) != Mark.AVAILABLE) ) {
+            return false;
         }
         return true;
     }

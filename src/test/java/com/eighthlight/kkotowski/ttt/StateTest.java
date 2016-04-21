@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
  */
 public class StateTest {
 
-    State state = new State();
-
     @Before
     public void setup() throws Exception {
         System.out.println( "...StateTest before starting" );
@@ -19,14 +17,20 @@ public class StateTest {
 
     @Test
     public void checkDefaults() throws Exception {
-        assertEquals( false, this.state.over() );
-        assertEquals( State.Page.MENU, this.state.page() );
+        State state = new State();
+        assertEquals( false, state.active() );
+        assertEquals( State.Page.MENU, state.page() );
     }
 
     @Test
-    public void setQuit() throws Exception {
-        assertEquals( false, this.state.over() );
-        this.state.action(Game.Action.QUIT);
-        assertEquals( State.Page.OVER, this.state.page() );
+    public void actionStartQuit() throws Exception {
+        State state = new State();
+        assertEquals( false, state.active() );
+        state.action(Game.Action.START);
+        assertEquals( true, state.active() );
+        assertEquals( State.Page.GAME, state.page() );
+        state.action(Game.Action.QUIT);
+        assertEquals( false, state.active() );
+        assertEquals( State.Page.OVER, state.page() );
     }
 }

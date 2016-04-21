@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -53,7 +54,11 @@ public class BoardTest {
 
     @Test
     public void setSquare() throws Exception {
+        assertEquals( Board.Mark.AVAILABLE, this.board.getSquare(0) );
         assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
+        assertEquals( Board.Mark.PLAYER1, this.board.getSquare(0) );
+        assertFalse( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
+
         assertTrue( this.board.setSquare( 1, Board.Mark.PLAYER2 ) );
         assertTrue( this.board.setSquare( 2, Board.Mark.PLAYER1 ) );
         assertTrue( this.board.setSquare( 3, Board.Mark.PLAYER2 ) );
@@ -73,7 +78,7 @@ public class BoardTest {
     public void getSquare() throws Exception {
         assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
         assertEquals( Board.Mark.PLAYER1, board.getSquare( 0 ) );
-        assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER2 ) );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 0 ) );
+        assertTrue( this.board.setSquare( 1, Board.Mark.PLAYER2 ) );
+        assertEquals( Board.Mark.PLAYER2, board.getSquare( 1 ) );
     }
 }

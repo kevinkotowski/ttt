@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -86,11 +85,48 @@ public class GameTest {
     }
 
     @Test
-    public void quit() throws Exception {
+    public void start() throws Exception {
         Game game = new Game();
-        assertFalse( game.getState().over() );
-        game.quit();
-        assertTrue( game.getState().over() );
+        assertEquals( false, game.getState().active() );
+        game.start();
+        assertEquals( true, game.getState().active() );
     }
 
+    @Test(expected = RuntimeException.class)
+    public void moveInvalid() throws Exception {
+        Game game = new Game();
+        assertEquals( false, game.move(9) );
+    }
+
+    @Test
+        public void move() throws Exception {
+        Game game = new Game();
+        assertEquals( false, game.getState().active() );
+        game.start();
+        assertEquals( true, game.getState().active() );
+
+        assertEquals( "1", game.showSquare(0) );
+        assertEquals( true, game.move(0) );
+        assertEquals( "X", game.showSquare(0) );
+
+        assertEquals( "2", game.showSquare(1) );
+        assertEquals( true, game.move(1) );
+        assertEquals( "O", game.showSquare(1) );
+    }
+
+    @Test
+    public void quit() throws Exception {
+        Game game = new Game();
+        assertEquals( false, game.getState().active() );
+        game.start();
+        assertEquals( true, game.getState().active() );
+        game.quit();
+        assertEquals( false, game.getState().active() );
+    }
+
+    @Test
+    public void showSquare() throws Exception {
+        Game game = new Game();
+//        assertEquals( "1", game.showSquare(0) );
+    }
 }

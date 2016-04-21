@@ -14,4 +14,9 @@ public class AppTest
     public void appDefaults() throws Exception {
         assertTrue( true );
     }
+
+    @Test
+    public void showBoard() throws Exception {
+//        App.showBoard
+    }
 }

@@ -11,22 +11,23 @@ public class State {
         OVER
     }
 
-    private Boolean over;
+    private Boolean active;
     private Page page;
 
     public State() {
-        this.over = false;
+        this.active = false;
         this.page = Page.MENU;
     }
 
     public void action(Game.Action action) {
         switch (action) {
-            case PLAY:
-                this.over = false;
+            case START:
+            case MOVE:
+                this.active = true;
                 this.page = Page.GAME;
                 break;
             case QUIT:
-                this.over = true;
+                this.active = false;
                 this.page = Page.OVER;
                 break;
             default:
@@ -38,7 +39,7 @@ public class State {
         return this.page;
     }
 
-    public boolean over() {
-        return this.over;
+    public boolean active() {
+        return this.active;
     }
 }

@@ -23,7 +23,8 @@ public class Game {
         MENU,
         EDIT,
         SWAP,
-        PLAY,
+        START,
+        MOVE,
         ENGAME,
         QUIT
     }
@@ -59,23 +60,48 @@ public class Game {
         this.turn = turn;
     }
 
-    public void move(int position) {
-        Board.Mark symbol;
-        if (this.turn == Turn.PLAYER1) {
-            symbol = Board.Mark.PLAYER1;
-        } else {
-            symbol = Board.Mark.PLAYER2;
+    public String showSquare(int position) {
+        String response = "";
+        switch ( this.board.getSquare(position) ) {
+            case AVAILABLE:
+                response = Integer.toString(position + 1);
+                break;
+            case PLAYER1:
+                response = this.players.get(0).getSymbol();
+                break;
+            case PLAYER2:
+                response = this.players.get(1).getSymbol();
+                break;
         }
-        this.board.setSquare(position, symbol);
+        return response;
+    }
+
+    public void start() {
+        this.state.action(Action.START);
+    }
+
+    public Boolean move(int position) {
+        Boolean response = false;
+        if ( (position > -1) && (position < 9) ) {
+            switch (this.turn) {
+                case PLAYER1:
+                    response = this.board.setSquare(position, Board.Mark.PLAYER1);
+                    this.setTurn(Turn.PLAYER2);
+                    break;
+                case PLAYER2:
+                    response = this.board.setSquare(position, Board.Mark.PLAYER2);
+                    this.setTurn(Turn.PLAYER1);
+                    break;
+                default:
+                    throw new RuntimeException("Invalid game.turn state.");
+            }
+        } else {
+            throw new RuntimeException("Invalid move position: " + position);
+        }
+        return response;
     }
 
     public void quit() {
         this.state.action(Action.QUIT);
     }
-//    public void run() {
-//        while (!state.quit()) {
-//            System.out.println( "...game.run loop" );
-//            state.action(Action.QUIT);
-//        }
-//    }
 }
