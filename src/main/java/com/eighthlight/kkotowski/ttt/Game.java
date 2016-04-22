@@ -10,7 +10,7 @@ public class Game {
     private Board board = null;
     private List<Player> players = new ArrayList<Player>(2);
     private State state = new State();
-    private Turn turn;
+    private Turn turn = null;
 
     public enum Strategy {
         EASY,
@@ -39,7 +39,6 @@ public class Game {
                 Game.Strategy.HUMAN) );
         this.players.add( new Player("Joshua", "O", Player.Mode.COMPUTER,
                 Game.Strategy.HARD) );
-        this.turn = Turn.PLAYER1;
     }
 
     public Board getBoard() { return this.board; };
@@ -70,6 +69,12 @@ public class Game {
 
 
     public Boolean getEndgame () {
+        // TODO: if winning combination
+
+        if ( !this.state.endgame() && Utils.boardFull(this.board) ) {
+            this.state.action(Action.ENDGAME);
+
+        }
         return this.state.endgame();
     }
 
@@ -97,6 +102,7 @@ public class Game {
         this.state.action(Action.START);
         this.board = null;
         this.board = new Board();
+        this.turn = Turn.PLAYER1;
     }
 
     public Boolean move(int position) {

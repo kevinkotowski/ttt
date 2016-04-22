@@ -44,16 +44,7 @@ public class GameTest {
         assertEquals( Player.Mode.COMPUTER, player.getMode() );
         assertEquals( Game.Strategy.HARD, player.getStrategy() );
 
-        Board board = game.getBoard();
-        int boardSize = board.getSize();
-        assertEquals( 9,  boardSize);
-
-        for (int x = 0; x < boardSize; x++) {
-//            assertEquals( Board.Mark.AVAILABLE, board.getSquare(x) );
-            assertEquals( Board.Mark.AVAILABLE, board.getSquare(x) );
-        }
-
-        assertEquals( Game.Turn.PLAYER1, game.getTurn() );
+        assertEquals( null, game.getTurn() );
     }
 
     @Test
@@ -78,6 +69,7 @@ public class GameTest {
     @Test
     public void changePlayer() throws Exception {
         Game game = new Game();
+        game.start();
 
         assertEquals( Game.Turn.PLAYER1, game.getTurn() );
         game.setTurn(Game.Turn.PLAYER2);
@@ -90,6 +82,16 @@ public class GameTest {
         assertEquals( false, game.getState().active() );
         game.start();
         assertEquals( true, game.getState().active() );
+
+        Board board = game.getBoard();
+        int boardSize = board.get().size();
+        assertEquals( 9,  boardSize);
+
+        for (int x = 0; x < boardSize; x++) {
+            assertEquals( Board.Mark.AVAILABLE, board.getSquare(x) );
+        }
+
+        assertEquals( Game.Turn.PLAYER1, game.getTurn() );
     }
 
     @Test(expected = RuntimeException.class)

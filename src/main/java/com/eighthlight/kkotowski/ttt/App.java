@@ -41,7 +41,7 @@ public class App
         String menuInput = "";
         showMenu(game);
         menuInput = getMenu(game);
-        if (menuInput.equals("y")) {
+        if (menuInput.equals("p")) {
             game.start();
         } else {
             exit = true;
@@ -66,12 +66,10 @@ public class App
     }
 
     public static String getMenu(Game game) {
-        System.out.println( "Enter 'y' to play: " );
         return getLetter();
     }
 
     private static String getMove(Game game) {
-        System.out.println( game.getTurnPlayer() + " move: " );
         return getLetter();
     }
 
@@ -90,7 +88,7 @@ public class App
     private static void makeMove(Game game, String gameInput) {
         int position;
 
-        System.out.println( game.getTurn() + " selected: " + gameInput );
+        System.out.println(  "Selected: " + gameInput );
         if ( gameInput.equals("q") ) {
             game.quit();
             System.out.println( "Quitting..." );
@@ -105,7 +103,11 @@ public class App
     }
 
     public static void showMenu(Game game) {
-        System.out.println( "I am a menu!" );
+        System.out.println( "+-------------------+" );
+        System.out.println( "| Menu:             |" );
+        System.out.println( "|    'p' to play    |" );
+        System.out.println( "|    'q' to quit    |" );
+        System.out.println( "+-------------------+" );
     }
 
     public static void showOver(Game game) {
@@ -118,7 +120,7 @@ public class App
 
     public static void showBoard(Game game) {
         Board board = game.getBoard();
-        int length = board.getSize();
+        int length = board.get().size();
         List squares = board.get();
 
         System.out.println( "+-------------------+" );
@@ -152,6 +154,7 @@ public class App
         System.out.println( "|                   |" );
         System.out.println( "+-------------------+" );
         System.out.println( "Enter your square, or 'q' to quit." );
+        System.out.println( game.getTurnPlayer() + " move: " );
     }
 
     public static String showSquare(Game game, int position) {

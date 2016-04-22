@@ -16,17 +16,13 @@ public class Board {
     }
 
     public Board() {
-        for (int position = 0; position < this.getSize(); position++) {
+        for (int position = 0; position < this.size; position++) {
             this.squares.add(position, Mark.AVAILABLE);
         }
     }
 
     public List<Mark> get() {
         return this.squares;
-    }
-
-    public int getSize() {
-        return this.size;
     }
 
     public Mark getSquare(int position) {
