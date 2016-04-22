@@ -11,11 +11,13 @@ public class State {
         OVER
     }
 
-    private Boolean active;
     private Page page;
+    private Boolean active;
+    private Boolean endgame;
 
     public State() {
         this.active = false;
+        this.endgame = false;
         this.page = Page.MENU;
     }
 
@@ -24,22 +26,33 @@ public class State {
             case START:
             case MOVE:
                 this.active = true;
+                this.endgame = false;
                 this.page = Page.GAME;
+                break;
+            case ENDGAME:
+                this.active = true;
+                this.endgame = true;
+                this.page = Page.OVER;
                 break;
             case QUIT:
                 this.active = false;
-                this.page = Page.OVER;
+                this.endgame = false;
+                this.page = Page.MENU;
                 break;
             default:
                 throw new RuntimeException("Invalid game action!");
         }
     }
 
-    public Page page() {
-        return this.page;
+    public Boolean active() {
+        return this.active;
     }
 
-    public boolean active() {
-        return this.active;
+    public Boolean endgame() {
+        return this.endgame;
+    }
+
+    public Page page() {
+        return this.page;
     }
 }

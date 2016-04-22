@@ -7,7 +7,7 @@ import java.util.List;
  * Created by kevinkotowski on 4/18/16.
  */
 public class Game {
-    private Board board = new Board();
+    private Board board = null;
     private List<Player> players = new ArrayList<Player>(2);
     private State state = new State();
     private Turn turn;
@@ -25,7 +25,7 @@ public class Game {
         SWAP,
         START,
         MOVE,
-        ENGAME,
+        ENDGAME,
         QUIT
     }
 
@@ -56,6 +56,23 @@ public class Game {
         return this.turn;
     }
 
+    public String getTurnPlayer() {
+        String response = "";
+        if (this.turn == Turn.PLAYER1) {;
+            response = this.players.get(0).getName() + " (" +
+                    this.players.get(0).getSymbol() + ")";
+        } else {
+            response = this.players.get(1).getName() + " (" +
+                    this.players.get(1).getSymbol() + ")";
+        }
+        return response;
+    }
+
+
+    public Boolean getEndgame () {
+        return this.state.endgame();
+    }
+
     public void setTurn(Turn turn) {
         this.turn = turn;
     }
@@ -78,6 +95,8 @@ public class Game {
 
     public void start() {
         this.state.action(Action.START);
+        this.board = null;
+        this.board = new Board();
     }
 
     public Boolean move(int position) {
