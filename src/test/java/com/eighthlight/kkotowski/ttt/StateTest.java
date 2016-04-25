@@ -20,8 +20,8 @@ public class StateTest {
         State state = new State();
         assertEquals( State.Page.MENU, state.page() );
         assertEquals( false, state.active() );
-        assertEquals( false, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( false, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
     }
 
     @Test
@@ -32,14 +32,14 @@ public class StateTest {
         state.action(Game.Action.START);
         assertEquals( State.Page.GAME, state.page() );
         assertEquals( true, state.active() );
-        assertEquals( false, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( false, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
 
         state.action(Game.Action.QUIT);
         assertEquals( State.Page.MENU, state.page() );
         assertEquals( false, state.active() );
-        assertEquals( false, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( false, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
     }
 
     @Test
@@ -47,20 +47,20 @@ public class StateTest {
         State state = new State();
         assertEquals( State.Page.MENU, state.page() );
         assertEquals( false, state.active() );
-        assertEquals( false, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( false, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
 
         state.action(Game.Action.START);
         assertEquals( State.Page.GAME, state.page() );
         assertEquals( true, state.active() );
-        assertEquals( false, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( false, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
 
         state.action(Game.Action.ENDGAME);
         assertEquals( State.Page.OVER, state.page() );
         assertEquals( false, state.active() );
-        assertEquals( true, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( true, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
     }
 
     @Test
@@ -69,16 +69,16 @@ public class StateTest {
         state.action(Game.Action.START);
         state.action(Game.Action.ENDGAME);
 
-        assertEquals( true, state.endgame() );
-        assertEquals( State.Winner.NONE, state.winner() );
+//        assertEquals( true, state.endgame() );
+        assertEquals( Game.Winner.NONE, state.winner() );
 
-        state.setWinner(State.Winner.PLAYER1);
-        assertEquals( State.Winner.PLAYER1, state.winner() );
+        state.setWinner(Game.Winner.PLAYER1);
+        assertEquals( Game.Winner.PLAYER1, state.winner() );
 
-        state.setWinner(State.Winner.PLAYER2);
-        assertEquals( State.Winner.PLAYER2, state.winner() );
+        state.setWinner(Game.Winner.PLAYER2);
+        assertEquals( Game.Winner.PLAYER2, state.winner() );
 
-        state.setWinner(State.Winner.TIE);
-        assertEquals( State.Winner.TIE, state.winner() );
+        state.setWinner(Game.Winner.TIE);
+        assertEquals( Game.Winner.TIE, state.winner() );
     }
 }

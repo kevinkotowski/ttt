@@ -11,23 +11,23 @@ public class State {
         OVER
     }
 
-    public enum Winner {
-        PLAYER1,
-        PLAYER2,
-        TIE,
-        NONE
-    }
+//    public enum Winner {
+//        PLAYER1,
+//        PLAYER2,
+//        TIE,
+//        NONE
+//    }
 
     private Page page;
     private Boolean active;
     private Boolean endgame;
-    private Winner winner;
+    private Game.Winner winner;
 
     public State() {
         this.page = Page.MENU;
         this.active = false;
         this.endgame = false;
-        this.winner = Winner.NONE;
+        this.winner = Game.Winner.NONE;
     }
 
     public void action(Game.Action action) {
@@ -48,8 +48,6 @@ public class State {
                 this.active = false;
                 this.endgame = false;
                 break;
-            default:
-                throw new RuntimeException("Invalid game action!");
         }
     }
 
@@ -61,16 +59,15 @@ public class State {
         return this.active;
     }
 
-    public Boolean endgame() {
-        return this.endgame;
-    }
+//    public Boolean endgame() {
+//        return this.endgame;
+//    }
 
-    public Winner winner() {
+    public Game.Winner winner() {
         return this.winner;
     }
 
-    public void setWinner(Winner winner) {
-        // TODO: Should I protect against setting winners without endgame == true?
+    public void setWinner(Game.Winner winner) {
         this.winner = winner;
     }
 }

@@ -41,39 +41,69 @@ public class BoardTest {
     @Test
     public void squares() throws Exception {
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 0 ) );
-        assertTrue( this.board.setSquare( 0, Board.Mark.PLAYER1 ) );
+        this.board.setSquare( 0, Board.Mark.PLAYER1 );
         assertEquals( Board.Mark.PLAYER1, board.getSquare( 0 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 1 ) );
-        assertTrue( this.board.setSquare( 1, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 1, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 1 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 2 ) );
-        assertTrue( this.board.setSquare( 2, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 2, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 2 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 3 ) );
-        assertTrue( this.board.setSquare( 3, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 3, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 3 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 4 ) );
-        assertTrue( this.board.setSquare( 4, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 4, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 4 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 5 ) );
-        assertTrue( this.board.setSquare( 5, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 5, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 5 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 6 ) );
-        assertTrue( this.board.setSquare( 6, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 6, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 6 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 7 ) );
-        assertTrue( this.board.setSquare( 7, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 7, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 7 ) );
 
         assertEquals( Board.Mark.AVAILABLE, this.board.getSquare( 8 ) );
-        assertTrue( this.board.setSquare( 8, Board.Mark.PLAYER2 ) );
+        this.board.setSquare( 8, Board.Mark.PLAYER2 );
         assertEquals( Board.Mark.PLAYER2, board.getSquare( 8 ) );
+    }
+
+    @Test
+    public void availableSquares() throws Exception {
+        Board board = new Board();
+        assertEquals( 9, board.availableSquares().size() );
+
+        board.setSquare(0, Board.Mark.PLAYER1);
+        assertEquals( 8, board.availableSquares().size() );
+    }
+
+    @Test
+    public void full() throws Exception {
+        Board board = new Board();
+        assertEquals( false, board.full() );
+
+        board.setSquare(0, Board.Mark.PLAYER1);
+        board.setSquare(1, Board.Mark.PLAYER1);
+        board.setSquare(2, Board.Mark.PLAYER1);
+
+        board.setSquare(3, Board.Mark.PLAYER1);
+        board.setSquare(4, Board.Mark.PLAYER1);
+        board.setSquare(5, Board.Mark.PLAYER1);
+
+        board.setSquare(6, Board.Mark.PLAYER1);
+        board.setSquare(7, Board.Mark.PLAYER1);
+        board.setSquare(8, Board.Mark.PLAYER1);
+
+        assertEquals( 0, board.availableSquares().size() );
+        assertEquals( true, board.full() );
     }
 }

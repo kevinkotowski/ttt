@@ -20,9 +20,6 @@ public class Game {
     }
 
     public enum Action {
-        MENU,
-        EDIT,
-        SWAP,
         START,
         MOVE,
         ENDGAME,
@@ -32,6 +29,13 @@ public class Game {
     public enum Turn {
         PLAYER1,
         PLAYER2
+    }
+
+    public enum Winner {
+        PLAYER1,
+        PLAYER2,
+        TIE,
+        NONE
     }
 
     public Game() {
@@ -67,16 +71,18 @@ public class Game {
         return response;
     }
 
+//    public Boolean getEndgame () {
+//        if ( this.state.winner() != Winner.NONE ) {
+//            Game.Winner winner;
+//            winner = this.checkWinner();
+//        }
 
-    public Boolean getEndgame () {
-        // TODO: if winning combination
+//        if ( !this.state.winner() && this.board.full() ) {
+//            this.state.action(Action.ENDGAME);
 
-        if ( !this.state.endgame() && Utils.boardFull(this.board) ) {
-            this.state.action(Action.ENDGAME);
-
-        }
-        return this.state.endgame();
-    }
+//        }
+//        return this.state.endgame();
+//    }
 
     public void setTurn(Turn turn) {
         this.turn = turn;
@@ -105,28 +111,83 @@ public class Game {
         this.turn = Turn.PLAYER1;
     }
 
-    public Boolean move(int position) {
-        Boolean response = false;
+    public void move(int position) {
+        Game.Winner winner;
+
         if ( (position > -1) && (position < 9) ) {
             switch (this.turn) {
                 case PLAYER1:
-                    response = this.board.setSquare(position, Board.Mark.PLAYER1);
+                    this.board.setSquare(position, Board.Mark.PLAYER1);
                     this.setTurn(Turn.PLAYER2);
                     break;
                 case PLAYER2:
-                    response = this.board.setSquare(position, Board.Mark.PLAYER2);
+                    this.board.setSquare(position, Board.Mark.PLAYER2);
                     this.setTurn(Turn.PLAYER1);
                     break;
                 default:
                     throw new RuntimeException("Invalid game.turn state.");
             }
+            winner = this.getWinner();
+            if (winner != Winner.NONE) {
+                this.state.setWinner(winner);
+            } else if ( this.board.full() ) {
+                this.state.setWinner(Winner.TIE);
+            }
         } else {
             throw new RuntimeException("Invalid move position: " + position);
         }
-        return response;
     }
 
     public void quit() {
         this.state.action(Action.QUIT);
+    }
+
+    public Winner getWinner() {
+        Winner winner = Winner.NONE;
+        List<String[]> winCombos = winCombinations();
+        int winComboLength = winCombos.size();
+        int x;
+        String[] winCombo = null;
+        Board.Mark mark = null;
+
+        for (x = 0; x < winComboLength; x++) {
+            winCombo = winCombos.get(x);
+            mark = this.board.getSquare( Integer.parseInt(winCombo[0]) );
+            if ( mark != Board.Mark.AVAILABLE &&
+                 mark == this.board.getSquare( Integer.parseInt(winCombo[1]) ) &&
+                 mark == this.board.getSquare( Integer.parseInt(winCombo[2]) )
+                ) {
+                this.state.action(Action.ENDGAME);
+                if ( mark == Board.Mark.PLAYER1 ) {
+                    winner = Winner.PLAYER1;
+                    this.state.setWinner(winner);
+                } else {
+                    winner = Winner.PLAYER2;
+                    this.state.setWinner(winner);
+                }
+            }
+        }
+
+        return winner;
+    }
+
+    public static List<String[]> winCombinations () {
+        List<String[]> response = new ArrayList<String[]>(8);
+
+        // horizontal
+        response.add( "012".split("") );
+        response.add( "345".split("") );
+        response.add( "678".split("") );
+
+//        // vertical
+        response.add( "036".split("") );
+        response.add( "147".split("") );
+        response.add( "258".split("") );
+
+//        // diagonal
+        response.add( "048".split("") );
+        response.add( "246".split("") );
+
+        return response;
     }
 }

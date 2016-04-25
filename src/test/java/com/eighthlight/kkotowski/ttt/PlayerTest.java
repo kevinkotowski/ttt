@@ -14,12 +14,6 @@ public class PlayerTest {
 
     Player player = new Player();
 
-    @Before
-    public void setup() throws Exception {
-        assertTrue( true );
-        System.out.println( "...PlayerTest before starting" );
-    }
-
     @Test
     public void playerDefaults() throws Exception {
         assertEquals( "Default", this.player.getName() );

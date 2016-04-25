@@ -2,9 +2,8 @@ package com.eigthlight.kkotowski.ttt;
 
 import com.eighthlight.kkotowski.ttt.Board;
 import com.eighthlight.kkotowski.ttt.Game;
-import com.eighthlight.kkotowski.ttt.Player;
+import com.eighthlight.kkotowski.ttt.State;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -16,6 +15,7 @@ import java.util.regex.Pattern;
 public class App 
 {
     private static Scanner reader = new Scanner(System.in);
+    private static String message = null;
     private static Boolean exit = false;
 
     public static void main( String[] args )
@@ -52,11 +52,30 @@ public class App
         String gameInput = "";
         showBoard(game);
         gameInput = getMove(game);
-        makeMove(game, gameInput);
+        try {
+            makeMove(game, gameInput);
+        } catch (RuntimeException error) {
+            message = error.getMessage();
+        };
+
     }
 
     public static void handleEndgame(Game game) {
-        if (game.getEndgame()) {
+        Game.Winner winner = game.getWinner();
+        if (winner != Game.Winner.NONE) {
+            switch (winner) {
+                case PLAYER1:
+                    message = "Player 1 wins!";
+                    break;
+                case PLAYER2:
+                    message = "Player 2 wins!";
+                    break;
+                case TIE:
+                    message = "Neither player wins.";
+                    break;
+            }
+            exit = true;
+            showBoard(game);
             showOver(game);
         }
     }
@@ -66,14 +85,14 @@ public class App
     }
 
     public static String getMenu(Game game) {
-        return getLetter();
+        return getFirstCharacter();
     }
 
     private static String getMove(Game game) {
-        return getLetter();
+        return getFirstCharacter();
     }
 
-    private static String getLetter() {
+    private static String getFirstCharacter() {
         String response = "";
 
         response = reader.nextLine();
@@ -107,6 +126,7 @@ public class App
         System.out.println( "| Menu:             |" );
         System.out.println( "|    'p' to play    |" );
         System.out.println( "|    'q' to quit    |" );
+        System.out.println( "|                   |" );
         System.out.println( "+-------------------+" );
     }
 
@@ -153,8 +173,14 @@ public class App
         System.out.println( "|      |     |      |" );
         System.out.println( "|                   |" );
         System.out.println( "+-------------------+" );
-        System.out.println( "Enter your square, or 'q' to quit." );
-        System.out.println( game.getTurnPlayer() + " move: " );
+        if ( message != null ) {
+            System.out.println( message );
+            message = null;
+        }
+        if ( !exit ) {
+            System.out.println( "Enter your square, or 'q' to quit." );
+            System.out.println( game.getTurnPlayer() + " move: " );
+        }
     }
 
     public static String showSquare(Game game, int position) {
