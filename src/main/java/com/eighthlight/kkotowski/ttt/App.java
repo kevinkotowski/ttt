@@ -38,7 +38,7 @@ public class App
     }
 
     public static void handleMenu(Game game) {
-        String menuInput = "";
+        String menuInput;
         showMenu(game);
         menuInput = getMenu(game);
         if (menuInput.equals("p")) {
@@ -49,7 +49,7 @@ public class App
     }
 
     public static void handleMove(Game game) {
-        String gameInput = "";
+        String gameInput;
         showBoard(game);
         gameInput = getMove(game);
         try {
@@ -74,7 +74,6 @@ public class App
                     message = "Neither player wins.";
                     break;
             }
-            exit = true;
             showBoard(game);
             showOver(game);
         }
@@ -93,7 +92,7 @@ public class App
     }
 
     private static String getFirstCharacter() {
-        String response = "";
+        String response;
 
         response = reader.nextLine();
 
@@ -131,7 +130,7 @@ public class App
     }
 
     public static void showOver(Game game) {
-        System.out.println( "Thanks for playing!" );
+        System.out.println( "The game is over." );
     }
 
     public static void showExit() {
@@ -177,7 +176,7 @@ public class App
             System.out.println( message );
             message = null;
         }
-        if ( !exit ) {
+        if ( game.getState().active() ) {
             System.out.println( "Enter your square, or 'q' to quit." );
             System.out.println( game.getTurnPlayer() + " move: " );
         }

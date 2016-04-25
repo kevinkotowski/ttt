@@ -71,19 +71,6 @@ public class Game {
         return response;
     }
 
-//    public Boolean getEndgame () {
-//        if ( this.state.winner() != Winner.NONE ) {
-//            Game.Winner winner;
-//            winner = this.checkWinner();
-//        }
-
-//        if ( !this.state.winner() && this.board.full() ) {
-//            this.state.action(Action.ENDGAME);
-
-//        }
-//        return this.state.endgame();
-//    }
-
     public void setTurn(Turn turn) {
         this.turn = turn;
     }
@@ -127,12 +114,12 @@ public class Game {
                 default:
                     throw new RuntimeException("Invalid game.turn state.");
             }
-            winner = this.getWinner();
-            if (winner != Winner.NONE) {
-                this.state.setWinner(winner);
-            } else if ( this.board.full() ) {
-                this.state.setWinner(Winner.TIE);
-            }
+//            winner = this.getWinner();
+//            if (winner != Winner.NONE) {
+//                this.state.setWinner(winner);
+//            } else if ( this.board.full() ) {
+//                this.state.setWinner(Winner.TIE);
+//            }
         } else {
             throw new RuntimeException("Invalid move position: " + position);
         }
@@ -166,9 +153,13 @@ public class Game {
                     this.state.setWinner(winner);
                 }
             }
+            if (winner == Winner.NONE && this.board.full() ) {
+                this.state.action(Action.ENDGAME);
+                this.state.setWinner(Winner.TIE);
+            }
         }
 
-        return winner;
+        return this.state.winner();
     }
 
     public static List<String[]> winCombinations () {
