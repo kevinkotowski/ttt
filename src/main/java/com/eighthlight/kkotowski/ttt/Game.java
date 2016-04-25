@@ -12,18 +12,18 @@ public class Game {
     private State state = new State();
     private Turn turn = null;
 
-    public enum Strategy {
-        EASY,
-        MEDIUM,
-        HARD,
-        HUMAN
-    }
-
     public enum Action {
         START,
         MOVE,
         ENDGAME,
         QUIT
+    }
+
+    public enum Strategy {
+        HUMAN,
+        EASY,
+        MEDIUM,
+        HARD
     }
 
     public enum Turn {
@@ -40,9 +40,9 @@ public class Game {
 
     public Game() {
         this.players.add( new Player("Homer", "X", Player.Mode.HUMAN,
-                Game.Strategy.HUMAN) );
+                Strategy.HUMAN) );
         this.players.add( new Player("Joshua", "O", Player.Mode.COMPUTER,
-                Game.Strategy.HARD) );
+                Strategy.HARD) );
     }
 
     public Board getBoard() { return this.board; };
@@ -59,20 +59,30 @@ public class Game {
         return this.turn;
     }
 
-    public String getTurnPlayer() {
-        String response = "";
+    public Player getTurnPlayer() {
+        Player response;
         if (this.turn == Turn.PLAYER1) {;
-            response = this.players.get(0).getName() + " (" +
-                    this.players.get(0).getSymbol() + ")";
+            response = this.players.get(0);
         } else {
-            response = this.players.get(1).getName() + " (" +
-                    this.players.get(1).getSymbol() + ")";
+            response = this.players.get(1);
         }
         return response;
     }
 
     public void setTurn(Turn turn) {
         this.turn = turn;
+    }
+
+    public String getTurnRecommendation() {
+        Player player = this.getTurnPlayer();
+        String move;
+
+        if ( player.getMode() == Player.Mode.HUMAN ) {
+            throw new RuntimeException("No recommendations for HUMAN players");
+        } else {
+            move = Integer.toString( player.getStrategy().recommend(this.board) );
+        }
+        return move;
     }
 
     public String showSquare(int position) {
@@ -114,12 +124,6 @@ public class Game {
                 default:
                     throw new RuntimeException("Invalid game.turn state.");
             }
-//            winner = this.getWinner();
-//            if (winner != Winner.NONE) {
-//                this.state.setWinner(winner);
-//            } else if ( this.board.full() ) {
-//                this.state.setWinner(Winner.TIE);
-//            }
         } else {
             throw new RuntimeException("Invalid move position: " + position);
         }

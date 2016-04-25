@@ -33,6 +33,7 @@ public class State {
     public void action(Game.Action action) {
         switch (action) {
             case START:
+                this.winner = Game.Winner.NONE;
             case MOVE:
                 this.page = Page.GAME;
                 this.active = true;

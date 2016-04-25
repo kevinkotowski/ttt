@@ -14,11 +14,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class GameTest {
     @Test
-    public void testTest() throws Exception {
-        assertTrue( true );
-    }
-
-    @Test
     public void gameDefaults() throws Exception {
         Game game = new Game();
         List<Player> players = new ArrayList();
@@ -37,13 +32,13 @@ public class GameTest {
         assertEquals( "Homer", player.getName() );
         assertEquals( "X", player.getSymbol() );
         assertEquals( Player.Mode.HUMAN, player.getMode() );
-        assertEquals( Game.Strategy.HUMAN, player.getStrategy() );
+        assertEquals( null, player.getStrategy() );
 
         player = players.get(1);
         assertEquals( "Joshua", player.getName() );
         assertEquals( "O", player.getSymbol() );
         assertEquals( Player.Mode.COMPUTER, player.getMode() );
-        assertEquals( Game.Strategy.HARD, player.getStrategy() );
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
 
         assertEquals( null, game.getTurn() );
     }
@@ -59,12 +54,11 @@ public class GameTest {
         players.get(1).setMode(Player.Mode.HUMAN);
 
         assertEquals( "Homer", players.get(0).getName() );
-        assertEquals( Player.Mode.HUMAN, players.get(0).getMode() );
-        assertEquals( Game.Strategy.HUMAN, players.get(0).getStrategy() );
+        assertEquals( null, players.get(1).getStrategy() );
 
         assertEquals( "Brian", players.get(1).getName() );
         assertEquals( Player.Mode.HUMAN, players.get(1).getMode() );
-        assertEquals( Game.Strategy.HUMAN, players.get(1).getStrategy() );
+        assertEquals( null, players.get(1).getStrategy() );
     }
 
     @Test
@@ -75,6 +69,39 @@ public class GameTest {
         assertEquals( Game.Turn.PLAYER1, game.getTurn() );
         game.setTurn(Game.Turn.PLAYER2);
         assertEquals( Game.Turn.PLAYER2, game.getTurn() );
+    }
+
+    @Test
+    public void getTurnPlayerMode() throws Exception {
+        Game game = new Game();
+        Player player = new Player();
+        game.start();
+
+        player = game.getTurnPlayer();
+        assertEquals( Player.Mode.HUMAN, player.getMode() );
+        assertEquals( null, player.getStrategy() );
+        game.move(0);
+
+        player = game.getTurnPlayer();
+        assertEquals( Player.Mode.COMPUTER, player.getMode() );
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void getTurnRecommendationHuman() throws Exception {
+        Game game = new Game();
+        game.start();
+        game.getTurnRecommendation();
+    }
+
+    @Test
+    public void getTurnRecommendation() throws Exception {
+        Game game = new Game();
+        game.start();
+        game.setTurn(Game.Turn.PLAYER2);
+
+        assertEquals( "Joshua", game.getTurnPlayer().getName() );
+        assertTrue( game.getTurnRecommendation().matches("[1-9]") );
     }
 
     @Test
@@ -162,7 +189,7 @@ public class GameTest {
     }
 
     @Test
-    public void checkWin() throws Exception {
+    public void checkWinner() throws Exception {
         Game game = new Game();
         game.start();
 

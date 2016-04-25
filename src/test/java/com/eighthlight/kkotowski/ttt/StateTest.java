@@ -9,12 +9,6 @@ import static org.junit.Assert.*;
  * Created by kevinkotowski on 4/20/16.
  */
 public class StateTest {
-
-    @Before
-    public void setup() throws Exception {
-        System.out.println( "...StateTest before starting" );
-    }
-
     @Test
     public void checkDefaults() throws Exception {
         State state = new State();

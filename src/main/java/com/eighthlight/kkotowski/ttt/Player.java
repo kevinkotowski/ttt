@@ -7,7 +7,7 @@ public class Player {
     private String name;
     private String symbol;
     private Mode mode;
-    private Game.Strategy strategy;
+    private Strategy strategy;
 
     public enum Mode {
         COMPUTER,
@@ -18,14 +18,14 @@ public class Player {
         this.name = "Default";
         this.symbol = "X";
         this.mode = Mode.COMPUTER;
-        this.strategy = Game.Strategy.HARD;
+        this.strategy = new StrategyHard();
     }
 
-    public Player(String name, String symbol, Mode mode, Game.Strategy strategy) {
+    public Player(String name, String symbol, Mode mode, Game.Strategy gameStrategy) {
         this.setName(name);
         this.setSymbol(symbol);
         this.setMode(mode);
-        this.setStrategy(strategy);
+        this.setStrategy(gameStrategy);
     }
 
     public String getName() {
@@ -59,12 +59,24 @@ public class Player {
         return this.mode;
     }
 
-    public Game.Strategy getStrategy() {
+    public Strategy getStrategy() {
         return this.strategy;
     }
 
-    public Game.Strategy setStrategy(Game.Strategy strategy) {
-        this.strategy = strategy;
+    public Strategy setStrategy(Game.Strategy gameStrategy) {
+        this.strategy = null;
+        switch (gameStrategy) {
+            case EASY:
+                this.strategy = new StrategyEasy();
+                break;
+            case HARD:
+                this.strategy = new StrategyHard();
+                break;
+            default:
+                // TODO: Ask if better to have an "empty" class for "Human"
+                this.strategy = null;
+                break;
+        }
         return this.strategy;
     }
 }

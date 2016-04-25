@@ -12,14 +12,14 @@ import static org.junit.Assert.assertTrue;
  */
 public class PlayerTest {
 
-    Player player = new Player();
 
     @Test
     public void playerDefaults() throws Exception {
-        assertEquals( "Default", this.player.getName() );
-        assertEquals( "X", this.player.getSymbol() );
-        assertEquals( Player.Mode.COMPUTER, this.player.getMode() );
-        assertEquals( Game.Strategy.HARD, this.player.getStrategy() );
+        Player player = new Player();
+        assertEquals( "Default", player.getName() );
+        assertEquals( "X", player.getSymbol() );
+        assertEquals( Player.Mode.COMPUTER, player.getMode() );
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
     }
 
     @Test
@@ -29,75 +29,84 @@ public class PlayerTest {
         assertEquals( "Kevin", overHuman.getName() );
         assertEquals( "$", overHuman.getSymbol() );
         assertEquals( Player.Mode.HUMAN, overHuman.getMode() );
-        assertEquals( Game.Strategy.HUMAN, overHuman.getStrategy() );
+        assertEquals( null, overHuman.getStrategy() );
     }
 
     @Test
     public void getName() throws Exception {
-        assertEquals( "Default", this.player.getName() );
+        Player player = new Player();
+        assertEquals( "Default", player.getName() );
     }
 
     @Test
     public void setName() throws Exception {
-        assertEquals( "Default", this.player.getName() );
-        this.player.setName("Homer");
-        assertEquals( "Homer", this.player.getName() );
+        Player player = new Player();
+        assertEquals( "Default", player.getName() );
+        player.setName("Homer");
+        assertEquals( "Homer", player.getName() );
 
         // put it back the way it was when we found it
-        this.player.setName("Default");
-        assertEquals( "Default", this.player.getName() );
+        player.setName("Default");
+        assertEquals( "Default", player.getName() );
     }
 
     @Test
     public void getMode() throws Exception {
-        assertEquals( Player.Mode.COMPUTER, this.player.getMode() );
+        Player player = new Player();
+        assertEquals( Player.Mode.COMPUTER, player.getMode() );
     }
 
     @Test
     public void setMode() throws Exception {
-        assertEquals( Player.Mode.COMPUTER, this.player.getMode() );
-        this.player.setMode( Player.Mode.HUMAN );
-        assertEquals( Player.Mode.HUMAN, this.player.getMode() );
+        Player player = new Player();
+        assertEquals( Player.Mode.COMPUTER, player.getMode() );
+        player.setMode( Player.Mode.HUMAN );
+        assertEquals( Player.Mode.HUMAN, player.getMode() );
 
         // put it back the way it was when we found it
-        this.player.setMode( Player.Mode.COMPUTER );
-        assertEquals( Player.Mode.COMPUTER, this.player.getMode() );
+        player.setMode( Player.Mode.COMPUTER );
+        assertEquals( Player.Mode.COMPUTER, player.getMode() );
     }
 
     @Test
     public void getStrategy() throws Exception {
-        assertEquals( Game.Strategy.HARD, this.player.getStrategy() );
+        Player player = new Player();
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
     }
 
     @Test
     public void setStrategy() throws Exception {
-        assertEquals( Game.Strategy.HARD, this.player.getStrategy() );
-        this.player.setStrategy( Game.Strategy.EASY );
-        assertEquals( Game.Strategy.EASY, this.player.getStrategy() );
+        Player player = new Player();
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
+        player.setStrategy( Game.Strategy.EASY );
+        assertEquals( StrategyEasy.class, player.getStrategy().getClass() );
 
         // put it back the way it was when we found it
-        this.player.setStrategy( Game.Strategy.HARD );
-        assertEquals( Game.Strategy.HARD, this.player.getStrategy() );
+        player.setStrategy( Game.Strategy.HARD );
+        assertEquals( StrategyHard.class, player.getStrategy().getClass() );
     }
 
     @Test
     public void getSymbol() throws Exception {
-        assertEquals( "X", this.player.getSymbol() );
+        Player player = new Player();
+        assertEquals( "X", player.getSymbol() );
     }
 
     @Test(expected = RuntimeException.class)
     public void badSymbol() throws Exception {
-        this.player.setSymbol( "XX" );
+        Player player = new Player();
+        player.setSymbol( "XX" );
     }
 
     @Test
     public void setSymbol() throws Exception {
-        assertEquals( "X", this.player.getSymbol() );
-        this.player.setSymbol("O");
-        assertEquals( "O", this.player.getSymbol() );
+        Player player = new Player();
+        assertEquals( "X", player.getSymbol() );
+        player.setSymbol("O");
+        assertEquals( "O", player.getSymbol() );
 
         // put it back the way it was when we found it
-        this.player.setSymbol("X");
-        assertEquals( "X", this.player.getSymbol() );
+        player.setSymbol("X");
+        assertEquals( "X", player.getSymbol() );
     }
 }

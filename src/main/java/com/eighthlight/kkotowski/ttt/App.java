@@ -1,8 +1,6 @@
 package com.eigthlight.kkotowski.ttt;
 
-import com.eighthlight.kkotowski.ttt.Board;
-import com.eighthlight.kkotowski.ttt.Game;
-import com.eighthlight.kkotowski.ttt.State;
+import com.eighthlight.kkotowski.ttt.*;
 
 import java.util.List;
 import java.util.Scanner;
@@ -51,6 +49,7 @@ public class App
     public static void handleMove(Game game) {
         String gameInput;
         showBoard(game);
+
         gameInput = getMove(game);
         try {
             makeMove(game, gameInput);
@@ -65,10 +64,10 @@ public class App
         if (winner != Game.Winner.NONE) {
             switch (winner) {
                 case PLAYER1:
-                    message = "Player 1 wins!";
+                    message = "Player 1, " + game.getPlayers().get(0).getName() + ", wins!";
                     break;
                 case PLAYER2:
-                    message = "Player 2 wins!";
+                    message = "Player 2, " + game.getPlayers().get(1).getName() + ", wins!";
                     break;
                 case TIE:
                     message = "Neither player wins.";
@@ -88,7 +87,15 @@ public class App
     }
 
     private static String getMove(Game game) {
-        return getFirstCharacter();
+        Player player = game.getTurnPlayer();
+        String move = null;
+
+        if (player.getMode() == Player.Mode.HUMAN) {
+            move = getFirstCharacter();
+        } else {
+            move = game.getTurnRecommendation();
+        }
+        return move;
     }
 
     private static String getFirstCharacter() {
@@ -106,7 +113,7 @@ public class App
     private static void makeMove(Game game, String gameInput) {
         int position;
 
-        System.out.println(  "Selected: " + gameInput );
+        System.out.println( "Selected: " + gameInput );
         if ( gameInput.equals("q") ) {
             game.quit();
             System.out.println( "Quitting..." );
@@ -141,6 +148,7 @@ public class App
         Board board = game.getBoard();
         int length = board.get().size();
         List squares = board.get();
+        Player player;
 
         System.out.println( "+-------------------+" );
         System.out.println( "|                   |" );
@@ -178,7 +186,9 @@ public class App
         }
         if ( game.getState().active() ) {
             System.out.println( "Enter your square, or 'q' to quit." );
-            System.out.println( game.getTurnPlayer() + " move: " );
+            player = game.getTurnPlayer();
+            System.out.println( player.getName() + " (" + player.getSymbol() +
+                    ") move: " );
         }
     }
 
