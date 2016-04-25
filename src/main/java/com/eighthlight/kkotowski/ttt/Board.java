@@ -67,4 +67,55 @@ public class Board {
         response = ( 0 == this.availableSquares().size() );
         return response;
     }
+
+    public Game.Winner getWinner() {
+        Game.Winner winner = Game.Winner.NONE;
+        List<String[]> winCombos = winCombinations();
+        int winComboLength = winCombos.size();
+        int x;
+        String[] winCombo = null;
+        Board.Mark mark = null;
+
+        for (x = 0; x < winComboLength; x++) {
+            winCombo = winCombos.get(x);
+            mark = this.getSquare( Integer.parseInt(winCombo[0]) );
+            if ( mark != Board.Mark.AVAILABLE &&
+                    mark == this.getSquare( Integer.parseInt(winCombo[1]) ) &&
+                    mark == this.getSquare( Integer.parseInt(winCombo[2]) )
+                    ) {
+                switch (mark) {
+                    case PLAYER1:
+                        winner = Game.Winner.PLAYER1;
+                        break;
+                    case PLAYER2:
+                        winner = Game.Winner.PLAYER2;
+                        break;
+                }
+            }
+        }
+        if ( winner == Game.Winner.NONE && this.full() ) {
+            winner = Game.Winner.TIE;
+        }
+        return winner;
+    }
+
+    public static List<String[]> winCombinations () {
+        List<String[]> response = new ArrayList<String[]>(8);
+
+        // horizontal
+        response.add( "012".split("") );
+        response.add( "345".split("") );
+        response.add( "678".split("") );
+
+        // vertical
+        response.add( "036".split("") );
+        response.add( "147".split("") );
+        response.add( "258".split("") );
+
+        // diagonal
+        response.add( "048".split("") );
+        response.add( "246".split("") );
+
+        return response;
+    }
 }

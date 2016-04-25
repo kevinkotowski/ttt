@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -105,5 +107,81 @@ public class BoardTest {
 
         assertEquals( 0, board.availableSquares().size() );
         assertEquals( true, board.full() );
+    }
+
+    @Test
+    public void winCombinations() throws Exception {
+        Game game = new Game();
+        List<String[]> combinations = new ArrayList<String[]>(8);
+
+        combinations = Board.winCombinations();
+        assertEquals( 8, combinations.size() );
+
+        // horizontal
+        assertEquals( true, Arrays.deepEquals(combinations.get(0), "012".split("") ) );
+        assertEquals( true, Arrays.deepEquals(combinations.get(1), "345".split("") ) );
+        assertEquals( true, Arrays.deepEquals(combinations.get(2), "678".split("") ) );
+
+        // vertical
+        assertEquals( true, Arrays.deepEquals(combinations.get(3), "036".split("") ) );
+        assertEquals( true, Arrays.deepEquals(combinations.get(4), "147".split("") ) );
+        assertEquals( true, Arrays.deepEquals(combinations.get(5), "258".split("") ) );
+
+        // diagonal
+        assertEquals( true, Arrays.deepEquals(combinations.get(6), "048".split("") ) );
+        assertEquals( true, Arrays.deepEquals(combinations.get(7), "246".split("") ) );
+
+        assertEquals( "2", String.valueOf( combinations.get(7)[0] ) );
+        assertEquals( "4", String.valueOf( combinations.get(7)[1] ) );
+        assertEquals( "6", String.valueOf( combinations.get(7)[2] ) );
+    }
+
+    @Test
+    public void getWinnerAvailable() throws Exception {
+        Board board = new Board();
+        assertEquals( Game.Winner.NONE, board.getWinner() );
+    }
+    @Test
+    public void getWinnerTie() throws Exception {
+        Board board = new Board();
+        board.setSquare(0, Board.Mark.PLAYER1);
+        board.setSquare(4, Board.Mark.PLAYER2);
+        board.setSquare(2, Board.Mark.PLAYER1);
+        assertEquals( Game.Winner.NONE, board.getWinner() );
+
+        board.setSquare(1, Board.Mark.PLAYER2);
+        board.setSquare(7, Board.Mark.PLAYER1);
+        board.setSquare(3, Board.Mark.PLAYER2);
+        assertEquals( Game.Winner.NONE, board.getWinner() );
+
+        board.setSquare(5, Board.Mark.PLAYER1);
+        board.setSquare(8, Board.Mark.PLAYER2);
+        board.setSquare(6, Board.Mark.PLAYER1);
+        assertEquals( Game.Winner.TIE, board.getWinner() );
+    }
+    @Test
+    public void getWinnerPlayer1() throws Exception {
+        Board board = new Board();
+        board.setSquare(0, Board.Mark.PLAYER1);
+        board.setSquare(1, Board.Mark.PLAYER2);
+        board.setSquare(2, Board.Mark.PLAYER1);
+
+        board.setSquare(3, Board.Mark.PLAYER2);
+        board.setSquare(4, Board.Mark.PLAYER1);
+        board.setSquare(5, Board.Mark.PLAYER2);
+
+        board.setSquare(6, Board.Mark.PLAYER1);
+        assertEquals( Game.Winner.PLAYER1, board.getWinner() );
+    }
+    @Test
+    public void getWinnerPlayer2() throws Exception {
+        Board board = new Board();
+        board.setSquare(0, Board.Mark.PLAYER1);
+        board.setSquare(6, Board.Mark.PLAYER2);
+        board.setSquare(1, Board.Mark.PLAYER1);
+
+        board.setSquare(7, Board.Mark.PLAYER2);
+        board.setSquare(2, Board.Mark.PLAYER1);
+        assertEquals( Game.Winner.PLAYER1, board.getWinner() );
     }
 }

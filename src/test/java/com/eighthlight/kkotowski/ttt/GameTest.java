@@ -162,33 +162,6 @@ public class GameTest {
     }
 
     @Test
-    public void winCombinations() throws Exception {
-        Game game = new Game();
-        List<String[]> combinations = new ArrayList<String[]>(8);
-
-        combinations = game.winCombinations();
-        assertEquals( 8, combinations.size() );
-
-        // horizontal
-        assertEquals( true, Arrays.deepEquals(combinations.get(0), "012".split("") ) );
-        assertEquals( true, Arrays.deepEquals(combinations.get(1), "345".split("") ) );
-        assertEquals( true, Arrays.deepEquals(combinations.get(2), "678".split("") ) );
-
-        // vertical
-        assertEquals( true, Arrays.deepEquals(combinations.get(3), "036".split("") ) );
-        assertEquals( true, Arrays.deepEquals(combinations.get(4), "147".split("") ) );
-        assertEquals( true, Arrays.deepEquals(combinations.get(5), "258".split("") ) );
-
-        // diagonal
-        assertEquals( true, Arrays.deepEquals(combinations.get(6), "048".split("") ) );
-        assertEquals( true, Arrays.deepEquals(combinations.get(7), "246".split("") ) );
-
-        assertEquals( "2", String.valueOf( combinations.get(7)[0] ) );
-        assertEquals( "4", String.valueOf( combinations.get(7)[1] ) );
-        assertEquals( "6", String.valueOf( combinations.get(7)[2] ) );
-    }
-
-    @Test
     public void checkWinner() throws Exception {
         Game game = new Game();
         game.start();

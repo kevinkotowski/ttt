@@ -5,27 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a369d829-d5f8-4998-9a98-f7b917d9f2a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Strategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$1.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$Action.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$Action.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$Strategy.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game$Strategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Board.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Player.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/State.class" afterPath="$PROJECT_DIR$/target/classes/com/eighthlight/kkotowski/ttt/State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eigthlight/kkotowski/ttt/App.class" afterPath="$PROJECT_DIR$/target/classes/com/eigthlight/kkotowski/ttt/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/BoardTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/BoardTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/GameTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/GameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/PlayerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/PlayerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/StateTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/eighthlight/kkotowski/ttt/StateTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/State.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/PlayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/PlayerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StateTest.java" />
     </list>
     <ignored path="kkotowski.ttt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +40,8 @@
           <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2014#2015#0" expanded="true" />
@@ -74,8 +62,8 @@
           <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-720">
-                  <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+                <state relative-caret-position="300">
+                  <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#991#992#0" expanded="true" />
@@ -88,7 +76,6 @@
                     <element signature="e#1471#1472#0" expanded="true" />
                     <element signature="e#3279#3280#0" expanded="true" />
                     <element signature="e#3325#3326#0" expanded="true" />
-                    <element signature="e#4655#4665#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -97,12 +84,13 @@
           <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+                <state relative-caret-position="195">
+                  <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#233#239#0" expanded="true" />
                     <element signature="e#1495#1504#0" expanded="true" />
+                    <element signature="e#3060#3070#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,8 +99,8 @@
           <file leaf-file-name="StrategyHard.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -148,8 +136,8 @@
           <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -160,29 +148,29 @@
           <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+                <state relative-caret-position="60">
+                  <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#5020#5030#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+                <state relative-caret-position="795">
+                  <caret line="183" column="21" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#3967#3977#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="StateTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="StateTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StateTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
@@ -233,19 +221,19 @@
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/UtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/EasyStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StateTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/PlayerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Strategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
       </list>
     </option>
   </component>
@@ -441,7 +429,85 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StateTest">
+  <component name="RunManager" selected="Application.App">
+    <configuration default="false" name="BoardTest.getWinnerTie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="kkotowski.ttt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
+      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.BoardTest" />
+      <option name="METHOD_NAME" value="getWinnerTie" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardTest.getWinnerPlayer1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="kkotowski.ttt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
+      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.BoardTest" />
+      <option name="METHOD_NAME" value="getWinnerPlayer1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardTest.getWinnerPlayer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="kkotowski.ttt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
+      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.BoardTest" />
+      <option name="METHOD_NAME" value="getWinnerPlayer2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="false" name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -468,108 +534,24 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="kkotowski.ttt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
-      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.PlayerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.eigthlight.kkotowski.ttt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="kkotowski.ttt" />
+      <option name="MAIN_CLASS_NAME" value="com.eigthlight.kkotowski.ttt.App" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
-      <option name="MAIN_CLASS_NAME" value="com.eigthlight.kkotowski.ttt.AppTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <module name="kkotowski.ttt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
-      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.BoardTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
       <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="kkotowski.ttt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
-      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.StateTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -852,19 +834,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.GameTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PlayerTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StateTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerTie" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerPlayer1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerPlayer2" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StateTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PlayerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GameTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerPlayer2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerPlayer1" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest.getWinnerTie" />
       </list>
     </recent_temporary>
   </component>
@@ -890,35 +872,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest - 2016.04.25 at 14h 20m 15s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="BoardTest_getWinnerPlayer1 - 2016.04.25 at 15h 39m 43s.xml">
+      <configuration name="BoardTest.getWinnerPlayer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest - 2016.04.25 at 14h 20m 25s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
+    <history-entry file="BoardTest_getWinnerPlayer1 - 2016.04.25 at 15h 56m 34s.xml">
+      <configuration name="BoardTest.getWinnerPlayer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest - 2016.04.25 at 13h 48m 46s.xml">
+    <history-entry file="BoardTest_getWinnerPlayer2 - 2016.04.25 at 15h 16m 09s.xml">
+      <configuration name="BoardTest.getWinnerPlayer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_getWinnerPlayer2 - 2016.04.25 at 15h 33m 17s.xml">
+      <configuration name="BoardTest.getWinnerPlayer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_getWinnerPlayer2 - 2016.04.25 at 15h 57m 07s.xml">
+      <configuration name="BoardTest.getWinnerPlayer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_getWinnerPlayer2 - 2016.04.25 at 15h 59m 25s.xml">
+      <configuration name="BoardTest.getWinnerPlayer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_getWinnerTie - 2016.04.25 at 15h 39m 34s.xml">
+      <configuration name="BoardTest.getWinnerTie" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_getWinnerTie - 2016.04.25 at 15h 56m 24s.xml">
+      <configuration name="BoardTest.getWinnerTie" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest - 2016.04.25 at 15h 59m 44s.xml">
       <configuration name="GameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest - 2016.04.25 at 13h 52m 23s.xml">
+    <history-entry file="GameTest - 2016.04.25 at 16h 00m 19s.xml">
       <configuration name="GameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameTest - 2016.04.25 at 14h 05m 30s.xml">
-      <configuration name="GameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameTest - 2016.04.25 at 14h 20m 30s.xml">
-      <configuration name="GameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameTest_getTurnPlayerMode - 2016.04.25 at 13h 48m 37s.xml">
-      <configuration name="GameTest.getTurnPlayerMode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2016.04.25 at 14h 07m 07s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2016.04.25 at 14h 20m 36s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StateTest - 2016.04.25 at 14h 20m 41s.xml">
-      <configuration name="StateTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1007,7 +989,6 @@
             <element signature="e#1471#1472#0" expanded="true" />
             <element signature="e#3279#3280#0" expanded="true" />
             <element signature="e#3325#3326#0" expanded="true" />
-            <element signature="e#4655#4665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1036,8 +1017,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#233#239#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
             <element signature="e#1495#1504#0" expanded="true" />
           </folding>
         </state>
@@ -1078,7 +1059,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5020#5030#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1099,6 +1079,7 @@
           <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3967#3977#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1149,7 +1130,6 @@
             <element signature="e#1471#1472#0" expanded="true" />
             <element signature="e#3279#3280#0" expanded="true" />
             <element signature="e#3325#3326#0" expanded="true" />
-            <element signature="e#4655#4665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1178,8 +1158,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#233#239#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
             <element signature="e#1495#1504#0" expanded="true" />
           </folding>
         </state>
@@ -1192,8 +1172,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#233#239#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
             <element signature="e#1495#1504#0" expanded="true" />
           </folding>
         </state>
@@ -1205,6 +1185,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3967#3977#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1285,100 +1266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3839#3840#0" expanded="true" />
-            <element signature="e#3887#3888#0" expanded="true" />
-            <element signature="e#5939#5940#0" expanded="true" />
-            <element signature="e#5987#5988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3325#3326#0" expanded="true" />
-            <element signature="e#4655#4665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#233#239#0" expanded="true" />
-            <element signature="e#1495#1504#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5020#5030#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1395,6 +1282,100 @@
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#233#239#0" expanded="true" />
+            <element signature="e#1495#1504#0" expanded="true" />
+            <element signature="e#3060#3070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
+            <element signature="e#2129#2130#0" expanded="true" />
+            <element signature="e#3745#3746#0" expanded="true" />
+            <element signature="e#3802#3803#0" expanded="true" />
+            <element signature="e#3839#3840#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5987#5988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="183" column="21" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3967#3977#0" expanded="true" />
           </folding>
         </state>
       </provider>

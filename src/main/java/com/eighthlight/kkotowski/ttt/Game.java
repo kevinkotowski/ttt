@@ -134,55 +134,15 @@ public class Game {
     }
 
     public Winner getWinner() {
-        Winner winner = Winner.NONE;
-        List<String[]> winCombos = winCombinations();
-        int winComboLength = winCombos.size();
-        int x;
-        String[] winCombo = null;
-        Board.Mark mark = null;
+        Winner winner;
 
-        for (x = 0; x < winComboLength; x++) {
-            winCombo = winCombos.get(x);
-            mark = this.board.getSquare( Integer.parseInt(winCombo[0]) );
-            if ( mark != Board.Mark.AVAILABLE &&
-                 mark == this.board.getSquare( Integer.parseInt(winCombo[1]) ) &&
-                 mark == this.board.getSquare( Integer.parseInt(winCombo[2]) )
-                ) {
-                this.state.action(Action.ENDGAME);
-                if ( mark == Board.Mark.PLAYER1 ) {
-                    winner = Winner.PLAYER1;
-                    this.state.setWinner(winner);
-                } else {
-                    winner = Winner.PLAYER2;
-                    this.state.setWinner(winner);
-                }
-            }
-            if (winner == Winner.NONE && this.board.full() ) {
-                this.state.action(Action.ENDGAME);
-                this.state.setWinner(Winner.TIE);
-            }
+        winner = this.board.getWinner();
+
+        if (winner != Winner.NONE) {
+            this.state.action(Action.ENDGAME);
+            this.state.setWinner(winner);
         }
 
         return this.state.winner();
-    }
-
-    public static List<String[]> winCombinations () {
-        List<String[]> response = new ArrayList<String[]>(8);
-
-        // horizontal
-        response.add( "012".split("") );
-        response.add( "345".split("") );
-        response.add( "678".split("") );
-
-//        // vertical
-        response.add( "036".split("") );
-        response.add( "147".split("") );
-        response.add( "258".split("") );
-
-//        // diagonal
-        response.add( "048".split("") );
-        response.add( "246".split("") );
-
-        return response;
     }
 }
