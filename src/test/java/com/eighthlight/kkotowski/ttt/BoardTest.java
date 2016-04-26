@@ -30,14 +30,32 @@ public class BoardTest {
         }
     }
 
-    @Test(expected = RuntimeException.class)
-    public void badPlacePosition() throws Exception {
-        this.board.setSquare( 9, Board.Mark.PLAYER1 );
+    @Test
+    public void copy() throws Exception {
+        Board origBoard = new Board();
+        Board copyBoard;
+
+        origBoard.setSquare( 0, Board.Mark.PLAYER1 );
+        origBoard.setSquare( 1, Board.Mark.PLAYER1 );
+        origBoard.setSquare( 8, Board.Mark.PLAYER1 );
+
+        origBoard.setSquare( 6, Board.Mark.PLAYER2 );
+        origBoard.setSquare( 7, Board.Mark.PLAYER2 );
+        origBoard.setSquare( 2, Board.Mark.PLAYER2 );
+
+        copyBoard = origBoard.copy();
+        int length = origBoard.get().size();
+
+        for (int x = 0; x < length; x++) {
+            assertEquals( origBoard.getSquare(x), copyBoard.getSquare(x) );
+//            System.out.println("...BoardTest.copy origBoard(" + x + "): " + origBoard.getSquare(x) );
+//            System.out.println("...BoardTest.copy copyBoard(" + x + "): " + copyBoard.getSquare(x) );
+        }
     }
 
     @Test(expected = RuntimeException.class)
-    public void badPlaceMark() throws Exception {
-        this.board.setSquare( 0, Board.Mark.AVAILABLE );
+    public void badPlacePosition() throws Exception {
+        this.board.setSquare( 9, Board.Mark.PLAYER1 );
     }
 
     @Test

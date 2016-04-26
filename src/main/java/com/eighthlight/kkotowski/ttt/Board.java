@@ -31,9 +31,6 @@ public class Board {
 
     public void setSquare(int position, Mark mark) {
         if ( this.available(position) ) {
-            if ((mark != Mark.PLAYER1) && (mark != Mark.PLAYER2)) {
-                throw new RuntimeException("Must place PLAYER1 or PLAYER2.");
-            }
             this.squares.set(position, mark);
         } else {
             throw new RuntimeException("Position is not available.");
@@ -51,10 +48,9 @@ public class Board {
     }
 
     public List<Integer> availableSquares () {
-        Integer size = this.squares.size();
-        List<Integer> response = new ArrayList<Integer>(size);
+        List<Integer> response = new ArrayList<Integer>(this.size);
 
-        for (int x = 0; x < size; x++) {
+        for (int x = 0; x < this.size; x++) {
             if (this.getSquare(x) == Board.Mark.AVAILABLE) {
                 response.add(x);
             }
@@ -62,7 +58,16 @@ public class Board {
         return response;
     }
 
-    public Boolean full () {
+    public Board copy() {
+        Board copyBoard = new Board();
+
+        for (int x = 0; x < this.size; x++) {
+            copyBoard.setSquare(x, this.getSquare(x) );
+        }
+        return copyBoard;
+    }
+
+    public Boolean full() {
         Boolean response = false;
         response = ( 0 == this.availableSquares().size() );
         return response;

@@ -1,5 +1,6 @@
 package com.eighthlight.kkotowski.ttt;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -8,18 +9,98 @@ import java.util.Random;
  */
 public class StrategyHard extends StrategyEasy {
     public Integer recommend(Board board) {
+        return this.unbeatable(board);
+    }
+
+    private Integer unbeatable(Board board) {
         Integer position;
-        if (board.availableSquares().size() == 9) {
+        List<Integer> availableSquares = board.availableSquares();
+        int availableSize = availableSquares.size();
+        int[] best = new int[2];
+
+        if ( availableSize == board.get().size() ) {
+            // It is possible to win from any starting move, so return random position
             position = this.random(board);
         } else {
-            position = this.unbeatable(board, 0, null);
+            best = minimax(board.copy(), 0, null);
+            position = best[1] + 1;
         }
         return position;
     }
 
-    private Integer unbeatable(Board board, int moves, Board.Mark maxPlayer) {
-        Integer position = this.next(board);
+    private int[] minimax(Board board, int moves, Board.Mark maxPlayer) {
+        List<Integer> availableSquares = board.availableSquares();
+        int availableSize = availableSquares.size();
+        Board.Mark currentPlayer;
+        Game.Winner winner;
+        int[] best = new int[2];
+        // best[0] score;
+        // best[1] move;
 
-        return position;
+        currentPlayer = (availableSize % 2 == 1) ? Board.Mark.PLAYER1 : Board.Mark.PLAYER2;
+
+//        System.out.println("...minimax: --------------------------------------" );
+//        System.out.println("...minimax moves: " + moves + " player: " + currentPlayer );
+//        for (int z = 0; z < availableSize; z++) {
+//            System.out.println("...minimax available: " + availableSquares.get(z) );
+//        }
+
+        winner = board.getWinner();
+        if (winner != Game.Winner.NONE) {
+            System.out.println("...minimax winner: " + winner );
+            int score = 0;
+            int[] response = new int[2];
+            switch (winner) {
+                case PLAYER1:
+                    score = (maxPlayer == Board.Mark.PLAYER1) ? 10 - moves : moves -10;
+                    break;
+                case PLAYER2:
+                    score = (maxPlayer == Board.Mark.PLAYER2) ? 10 - moves : moves -10;
+                    break;
+                case TIE:
+                    score = 0;
+                    break;
+            }
+            response[0] = score;
+            response[1] = -1;
+            return response;
+        }
+
+        if (maxPlayer == null) { maxPlayer = currentPlayer; }
+        if (maxPlayer == currentPlayer) {
+            int[] maxResult = new int[2];
+            best[0] = -1000; //score
+            for (int x = 0; x < availableSize; x++) {
+//                System.out.println("...minimax max move: " + x + ", " + availableSquares.get(x) );
+                Board maxBoard = board.copy();
+                maxBoard.setSquare(availableSquares.get(x), currentPlayer);
+                maxResult = minimax(maxBoard, moves + 1, maxPlayer);
+                if ( maxResult[0] > best[0] ) {
+                    best[0] = maxResult[0];
+                    best[1] = availableSquares.get(x);
+                }
+            }
+        } else {
+            int[] minResult = new int[2];
+            best[0] = 1000; //score
+            for (int y = 0; y < availableSize; y++) {
+//                System.out.println("...minimax max move: " + y + ", " + availableSquares.get(y) );
+                Board minBoard = board.copy();
+                minBoard.setSquare(availableSquares.get(y), currentPlayer);
+                minResult = minimax(minBoard, moves + 1, maxPlayer);
+                if ( minResult[0] < best[0] ) {
+                    best[0] = minResult[0];
+                    best[1] = availableSquares.get(y);
+                }
+            }
+        }
+
+//        bestMove = availableSquares.get(0);
+//        System.out.println("...minimax result bestScore: " + best.get(0) + ", bestMove: " + best.get(1) );
+//        for (int k = 0; k < availableSize; k++) {
+//            System.out.println("...minimax result available: " + availableSquares.get(k));
+//        }
+//        return bestMove + 1;
+        return best;
     }
 }
