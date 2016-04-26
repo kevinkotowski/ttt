@@ -90,7 +90,7 @@ public class App
         this.showExit();
     }
 
-    public String getMenu() {
+    private String getMenu() {
         return this.getFirstCharacter();
     }
 
@@ -118,7 +118,7 @@ public class App
         return response;
     }
 
-    private void makeMove(String gameInput) {
+    public void makeMove(String gameInput) {
         int position;
 
         System.out.println( "Selected: " + gameInput );

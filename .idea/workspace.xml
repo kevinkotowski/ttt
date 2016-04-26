@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a369d829-d5f8-4998-9a98-f7b917d9f2a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
     </list>
@@ -31,16 +30,16 @@
           <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="825">
-                  <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#859#860#0" expanded="true" />
                     <element signature="e#893#894#0" expanded="true" />
                     <element signature="e#2192#2193#0" expanded="true" />
                     <element signature="e#2223#2224#0" expanded="true" />
-                    <element signature="e#2254#2255#0" expanded="true" />
-                    <element signature="e#2301#2302#0" expanded="true" />
+                    <element signature="e#2255#2256#0" expanded="true" />
+                    <element signature="e#2302#2303#0" expanded="true" />
                     <element signature="e#3511#3512#0" expanded="true" />
                     <element signature="e#3567#3568#0" expanded="true" />
                     <element signature="e#6127#6128#0" expanded="true" />
@@ -131,7 +130,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
@@ -143,7 +142,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
@@ -851,8 +850,8 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.App" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.com.eighthlight.kkotowski.ttt in kkotowski.ttt" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest" />
       </list>
     </recent_temporary>
@@ -885,17 +884,14 @@
     <history-entry file="AppTest - 2016.04.26 at 13h 34m 09s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest - 2016.04.26 at 14h 17m 35s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="GameTest - 2016.04.26 at 10h 24m 15s.xml">
       <configuration name="GameTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="GameTest - 2016.04.26 at 13h 34m 14s.xml">
       <configuration name="GameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2016.04.26 at 10h 22m 02s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2016.04.26 at 10h 22m 11s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PlayerTest - 2016.04.26 at 10h 24m 25s.xml">
       <configuration name="PlayerTest" configurationId="JUnit" />
@@ -909,10 +905,13 @@
     <history-entry file="com_eighthlight_kkotowski_ttt_in_kkotowski_ttt - 2016.04.26 at 13h 34m 39s.xml">
       <configuration name="com.eighthlight.kkotowski.ttt in kkotowski.ttt" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="com_eighthlight_kkotowski_ttt_in_kkotowski_ttt - 2016.04.26 at 14h 17m 50s.xml">
+      <configuration name="com.eighthlight.kkotowski.ttt in kkotowski.ttt" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1676" height="1027" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -922,7 +921,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -972,8 +971,8 @@
             <element signature="e#893#894#0" expanded="true" />
             <element signature="e#2192#2193#0" expanded="true" />
             <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
             <element signature="e#3511#3512#0" expanded="true" />
             <element signature="e#3567#3568#0" expanded="true" />
             <element signature="e#6127#6128#0" expanded="true" />
@@ -1108,8 +1107,8 @@
             <element signature="e#893#894#0" expanded="true" />
             <element signature="e#2192#2193#0" expanded="true" />
             <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
             <element signature="e#3511#3512#0" expanded="true" />
             <element signature="e#3567#3568#0" expanded="true" />
             <element signature="e#6127#6128#0" expanded="true" />
@@ -1231,8 +1230,8 @@
             <element signature="e#893#894#0" expanded="true" />
             <element signature="e#2192#2193#0" expanded="true" />
             <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
             <element signature="e#3511#3512#0" expanded="true" />
             <element signature="e#3567#3568#0" expanded="true" />
             <element signature="e#6127#6128#0" expanded="true" />
@@ -1400,16 +1399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -1443,18 +1432,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#859#860#0" expanded="true" />
             <element signature="e#893#894#0" expanded="true" />
             <element signature="e#2192#2193#0" expanded="true" />
             <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
             <element signature="e#3511#3512#0" expanded="true" />
             <element signature="e#3567#3568#0" expanded="true" />
             <element signature="e#6127#6128#0" expanded="true" />
