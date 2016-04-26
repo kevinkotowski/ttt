@@ -1,13 +1,11 @@
 package com.eighthlight.kkotowski.ttt;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by kevinkotowski on 4/25/16.
  */
-public class StrategyHard extends StrategyEasy {
+public class StrategyHard implements Strategy {
     public int recommend(Board board) {
         return this.unbeatable(board);
     }
