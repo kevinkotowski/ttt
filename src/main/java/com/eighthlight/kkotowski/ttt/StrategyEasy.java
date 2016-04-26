@@ -7,7 +7,7 @@ import java.util.Random;
  * Created by kevinkotowski on 4/25/16.
  */
 public class StrategyEasy implements Strategy {
-    public Integer next(Board board) {
+    public int next(Board board) {
         List<Integer> available;
         Integer position;
 
@@ -17,7 +17,7 @@ public class StrategyEasy implements Strategy {
         return position;
     }
 
-    public Integer random(Board board) {
+    public int random(Board board) {
         List<Integer> available;
         Integer position;
         Random random = new Random();
@@ -29,7 +29,7 @@ public class StrategyEasy implements Strategy {
         return position;
     }
 
-    public Integer recommend(Board board) {
+    public int recommend(Board board) {
         return this.random(board);
     };
 }

@@ -1,17 +1,13 @@
 package com.eighthlight.kkotowski.ttt;
 
-//import junit.framework.TestCase;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Created by kevinkotowski on 4/18/16.
  */
 public class PlayerTest {
-
 
     @Test
     public void playerDefaults() throws Exception {

@@ -8,7 +8,7 @@ import java.util.Random;
  * Created by kevinkotowski on 4/25/16.
  */
 public class StrategyHard extends StrategyEasy {
-    public Integer recommend(Board board) {
+    public int recommend(Board board) {
         return this.unbeatable(board);
     }
 
@@ -17,9 +17,12 @@ public class StrategyHard extends StrategyEasy {
         List<Integer> availableSquares = board.availableSquares();
         int availableSize = availableSquares.size();
         int[] best = new int[2];
+        // best[0] stores the score
+        // best[1] stores the move move
 
         if ( availableSize == board.get().size() ) {
-            // It is possible to win from any starting move, so return random position
+            // You can win and protect from losing with any starting move,
+            // so return random position
             position = this.random(board);
         } else {
             best = minimax(board.copy(), 0, null);
@@ -34,8 +37,8 @@ public class StrategyHard extends StrategyEasy {
         Board.Mark currentPlayer;
         Game.Winner winner;
         int[] best = new int[2];
-        // best[0] score;
-        // best[1] move;
+        // best[0] stores the score
+        // best[1] stores the move move
 
         currentPlayer = (availableSize % 2 == 1) ? Board.Mark.PLAYER1 : Board.Mark.PLAYER2;
 
@@ -47,7 +50,7 @@ public class StrategyHard extends StrategyEasy {
 
         winner = board.getWinner();
         if (winner != Game.Winner.NONE) {
-            System.out.println("...minimax winner: " + winner );
+//            System.out.println("...minimax winner: " + winner );
             int score = 0;
             int[] response = new int[2];
             switch (winner) {
@@ -95,12 +98,6 @@ public class StrategyHard extends StrategyEasy {
             }
         }
 
-//        bestMove = availableSquares.get(0);
-//        System.out.println("...minimax result bestScore: " + best.get(0) + ", bestMove: " + best.get(1) );
-//        for (int k = 0; k < availableSize; k++) {
-//            System.out.println("...minimax result available: " + availableSquares.get(k));
-//        }
-//        return bestMove + 1;
         return best;
     }
 }

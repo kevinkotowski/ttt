@@ -5,5 +5,5 @@ package com.eighthlight.kkotowski.ttt;
  */
 
 public interface Strategy {
-    public Integer recommend(Board board);
+    public int recommend(Board board);
 }

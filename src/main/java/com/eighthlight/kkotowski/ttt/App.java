@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     private static Scanner reader = new Scanner(System.in);
     private static String message = null;
