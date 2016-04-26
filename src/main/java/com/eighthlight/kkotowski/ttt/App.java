@@ -8,20 +8,21 @@ import java.util.regex.Pattern;
 
 public class App
 {
+    private Game game = null;
+    private Boolean exit = false;
+
     public static void main( String[] args ) {
         App app = new App();
         app.run();
     }
 
-    private Scanner reader = new Scanner(System.in);
-    private String message = null;
-
-    private Game game = null;
-    private Boolean exit = false;
+    public App() {
+        this.game = new Game();
+        this.input = new Scanner(System.in);
+    }
 
     public void run()
     {
-        this.game = new Game();
         this.handleWelcome();
 
         // menu loop
@@ -29,7 +30,7 @@ public class App
             this.handleMenu();
 
             // game loop
-            while (!this.exit && game.getState().active()) {
+            while (!this.exit && game.isActive()) {
                 this.handleMove();
                 this.handleEndgame();
             }
@@ -109,7 +110,7 @@ public class App
     private String getFirstCharacter() {
         String response;
 
-        response = this.reader.nextLine();
+        response = this.input.nextLine();
 
         if (response.length() > 1) {
             System.out.println( "(only the first character will be used.)\n" );
@@ -123,7 +124,8 @@ public class App
 
         System.out.println( "Selected: " + gameInput );
         if ( gameInput.equals("q") ) {
-            this.game.quit();
+//            this.game.quit();
+
             System.out.println( "Quitting..." );
         } else {
             if ( Pattern.matches( "[1-9]", gameInput ) ) {
@@ -134,6 +136,10 @@ public class App
             }
         }
     }
+
+    // UI starts here
+    private Scanner input = null;
+    private String message = null;
 
     public void showWelcome() {
         System.out.println( "Java Tic Tac Toe" );
@@ -196,7 +202,7 @@ public class App
             System.out.println( message );
             this.message = null;
         }
-        if ( game.getState().active() ) {
+        if ( game.isActive() ) {
             System.out.println( "Enter your square, or 'q' to quit." );
             player = this.game.getTurnPlayer();
             System.out.println( player.getName() + " (" + player.getSymbol() +

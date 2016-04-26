@@ -9,8 +9,8 @@ import java.util.List;
 public class Game {
     private Board board = null;
     private List<Player> players = new ArrayList<Player>(2);
-    private State state = new State();
     private Turn turn = null;
+    private Boolean active = false;
 
     public enum Action {
         START,
@@ -45,14 +45,16 @@ public class Game {
                 Strategy.HARD) );
     }
 
+    public Boolean isActive() { return this.active; };
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
     public Board getBoard() { return this.board; };
 
     public List<Player> getPlayers() {
         return this.players;
-    }
-
-    public State getState() {
-        return this.state;
     }
 
     public Turn getTurn() {
@@ -102,7 +104,7 @@ public class Game {
     }
 
     public void start() {
-        this.state.action(Action.START);
+        this.setActive(true);
         this.board = null;
         this.board = new Board();
         this.turn = Turn.PLAYER1;
@@ -130,19 +132,16 @@ public class Game {
     }
 
     public void quit() {
-        this.state.action(Action.QUIT);
+        this.setActive(false);
     }
 
     public Winner getWinner() {
         Winner winner;
-
         winner = this.board.getWinner();
 
         if (winner != Winner.NONE) {
-            this.state.action(Action.ENDGAME);
-            this.state.setWinner(winner);
+            this.setActive(false);
         }
-
-        return this.state.winner();
+        return winner;
     }
 }

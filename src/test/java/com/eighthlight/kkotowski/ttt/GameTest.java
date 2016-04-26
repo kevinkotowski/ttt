@@ -106,9 +106,9 @@ public class GameTest {
     @Test
     public void start() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.getState().active() );
+        assertEquals( false, game.isActive() );
         game.start();
-        assertEquals( true, game.getState().active() );
+        assertEquals( true, game.isActive() );
 
         Board board = game.getBoard();
         int boardSize = board.get().size();
@@ -130,9 +130,9 @@ public class GameTest {
     @Test
         public void move() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.getState().active() );
+        assertEquals( false, game.isActive() );
         game.start();
-        assertEquals( true, game.getState().active() );
+        assertEquals( true, game.isActive() );
 
         assertEquals( "1", game.showSquare(0) );
         game.move(0);
@@ -146,11 +146,11 @@ public class GameTest {
     @Test
     public void quit() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.getState().active() );
+        assertEquals( false, game.isActive() );
         game.start();
-        assertEquals( true, game.getState().active() );
+        assertEquals( true, game.isActive() );
         game.quit();
-        assertEquals( false, game.getState().active() );
+        assertEquals( false, game.isActive() );
     }
 
     @Test
@@ -177,7 +177,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(2); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
 
         // horizontal 345
@@ -193,7 +192,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(5); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
 
         // horizontal 678
@@ -211,7 +209,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(8); //p2
         assertEquals( Game.Winner.PLAYER2, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER2, game.getState().winner() );
         game.quit();
 
         // vertical 036
@@ -227,7 +224,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(6); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
 
         // vertical 147
@@ -245,7 +241,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(7); //p2
         assertEquals( Game.Winner.PLAYER2, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER2, game.getState().winner() );
         game.quit();
 
         // vertical 258
@@ -261,7 +256,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(8); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
 
         // diagonal 048
@@ -277,7 +271,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(8); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
 
         // diagonal 246
@@ -293,7 +286,6 @@ public class GameTest {
         assertEquals( Game.Winner.NONE, game.getWinner() );
         game.move(6); //p1
         assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        assertEquals( Game.Winner.PLAYER1, game.getState().winner() );
         game.quit();
     }
 }
