@@ -75,18 +75,17 @@ public class Board {
 
     public Game.Winner getWinner() {
         Game.Winner winner = Game.Winner.NONE;
-        List<String[]> winCombos = winCombinations();
-        int winComboLength = winCombos.size();
+        int[][] winCombos = winCombinations();
         int x;
-        String[] winCombo = null;
+        int[] winCombo = null;
         Board.Mark mark = null;
 
-        for (x = 0; x < winComboLength; x++) {
-            winCombo = winCombos.get(x);
-            mark = this.getSquare( Integer.parseInt(winCombo[0]) );
+        for (x = 0; x < winCombos.length; x++) {
+            winCombo = winCombos[x];
+            mark = this.getSquare( winCombo[0] );
             if ( mark != Board.Mark.AVAILABLE &&
-                    mark == this.getSquare( Integer.parseInt(winCombo[1]) ) &&
-                    mark == this.getSquare( Integer.parseInt(winCombo[2]) )
+                    mark == this.getSquare( winCombo[1] ) &&
+                    mark == this.getSquare( winCombo[2] )
                     ) {
                 switch (mark) {
                     case PLAYER1:
@@ -104,22 +103,22 @@ public class Board {
         return winner;
     }
 
-    public static List<String[]> winCombinations () {
-        List<String[]> response = new ArrayList<String[]>(8);
+    public static int[][] winCombinations () {
+        int[][] response = new int[8][3];
 
         // horizontal
-        response.add( "012".split("") );
-        response.add( "345".split("") );
-        response.add( "678".split("") );
+        response[0] = new int[]{ 0, 1, 2 };
+        response[1] = new int[]{ 3, 4, 5 };
+        response[2] = new int[]{ 6, 7, 8 };
 
         // vertical
-        response.add( "036".split("") );
-        response.add( "147".split("") );
-        response.add( "258".split("") );
+        response[3] = new int[]{ 0, 3, 6 };
+        response[4] = new int[]{ 1, 4, 7 };
+        response[5] = new int[]{ 2, 5, 8 };
 
         // diagonal
-        response.add( "048".split("") );
-        response.add( "246".split("") );
+        response[6] = new int[]{ 0, 4, 8 };
+        response[7] = new int[]{ 2, 4, 6 };
 
         return response;
     }
