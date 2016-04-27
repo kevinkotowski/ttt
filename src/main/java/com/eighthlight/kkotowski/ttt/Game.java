@@ -87,7 +87,7 @@ public class Game {
         return move;
     }
 
-    public String showSquare(int position) {
+    public String getSquare(int position) {
         String response = "";
         switch ( this.board.getSquare(position) ) {
             case AVAILABLE:

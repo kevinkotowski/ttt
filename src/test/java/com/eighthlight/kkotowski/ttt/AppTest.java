@@ -1,7 +1,5 @@
 package com.eigthlight.kkotowski.ttt;
 
-//import com.eighthlight.kkotowski.ttt.App;
-import com.eighthlight.kkotowski.ttt.Game;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -12,17 +10,8 @@ import static org.junit.Assert.assertTrue;
 public class AppTest 
 {
     @Test
-    public void appDefaults() throws Exception {
-        assertTrue( true );
+    public void runAppDefaultUI() throws Exception {
+        App app = new App();
+        app.run();
     }
-
-    @Test
-    public void gameDefaults() throws Exception {
-        Game game = new Game();
-    }
-//    @Test
-//    public void runAppDefaultUI() throws Exception {
-//        App app = App();
-//        app.run();
-//    }
 }

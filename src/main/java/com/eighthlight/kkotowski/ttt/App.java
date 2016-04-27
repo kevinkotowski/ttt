@@ -2,13 +2,13 @@ package com.eigthlight.kkotowski.ttt;
 
 import com.eighthlight.kkotowski.ttt.*;
 
-import java.util.List;
-import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class App
 {
+    private IO io = null;
     private Game game = null;
+    private View view = null;
     private Boolean exit = false;
 
     public static void main( String[] args ) {
@@ -17,8 +17,15 @@ public class App
     }
 
     public App() {
+        this.io = new IOTerminal();
         this.game = new Game();
-        this.input = new Scanner(System.in);
+        this.view = new ViewCLI( io, this.game );
+    }
+
+    public App(IO io) {
+        this.io = io;
+        this.game = new Game();
+        this.view = new ViewCLI( io, this.game );
     }
 
     public void run()
@@ -39,12 +46,12 @@ public class App
     }
 
     public void handleWelcome() {
-        this.showWelcome();
+        this.view.showWelcome();
     }
 
     public void handleMenu() {
         String menuInput;
-        this.showMenu();
+        this.view.showMenu();
         menuInput = this.getMenu();
         if (menuInput.equals("p")) {
             this.game.start();
@@ -55,13 +62,13 @@ public class App
 
     public void handleMove() {
         String gameInput;
-        this.showBoard();
+        this.view.showBoard(this.game.getBoard());
 
         gameInput = this.getMove();
         try {
             this.makeMove(gameInput);
         } catch (RuntimeException error) {
-            this.message = error.getMessage();
+            this.view.setMessage( error.getMessage() );
         };
 
     }
@@ -71,24 +78,24 @@ public class App
         if (winner != Game.Winner.NONE) {
             switch (winner) {
                 case PLAYER1:
-                    this.message = "Player 1, " +
-                            this.game.getPlayers().get(0).getName() + ", wins!";
+                    this.view.setMessage ("Player 1, " +
+                           this.game.getPlayers().get(0).getName() + ", wins!");
                     break;
                 case PLAYER2:
-                    this.message = "Player 2, " +
-                            this.game.getPlayers().get(1).getName() + ", wins!";
+                    this.view.setMessage("Player 2, " +
+                           this.game.getPlayers().get(1).getName() + ", wins!");
                     break;
                 case TIE:
-                    this.message = "Neither player wins.";
+                    this.view.setMessage("Neither player wins.");
                     break;
             }
-            this.showBoard();
-            this.showOver();
+            this.view.showBoard(this.game.getBoard());
+            this.view.showOver();
         }
     }
 
     public void handleExit() {
-        this.showExit();
+        this.view.showExit();
     }
 
     private String getMenu() {
@@ -110,10 +117,10 @@ public class App
     private String getFirstCharacter() {
         String response;
 
-        response = this.input.nextLine();
+        response = this.io.nextLine();
 
         if (response.length() > 1) {
-            System.out.println( "(only the first character will be used.)\n" );
+            this.io.println( "(only the first character will be used.)\n" );
         }
         response = response.substring( 0,1 );
         return response;
@@ -122,95 +129,18 @@ public class App
     public void makeMove(String gameInput) {
         int position;
 
-        System.out.println( "Selected: " + gameInput );
+        this.io.println( "Selected: " + gameInput );
         if ( gameInput.equals("q") ) {
-            this.exit = true;
+            game.setActive(false);
 
-            System.out.println( "Quitting..." );
+            this.io.println( "Quitting..." );
         } else {
             if ( Pattern.matches( "[1-9]", gameInput ) ) {
                 position = Integer.parseInt(gameInput) - 1;
                 this.game.move(position);
             } else {
-                System.out.println( "Valid square numbers are 1-9" );
+                this.io.println( "Valid square numbers are 1-9" );
             }
         }
-    }
-
-    // UI starts here
-    private Scanner input = null;
-    private String message = null;
-
-    public void showWelcome() {
-        System.out.println( "Java Tic Tac Toe" );
-    }
-
-    public void showMenu() {
-        System.out.println( "+-------------------+" );
-        System.out.println( "| Menu:             |" );
-        System.out.println( "|    'p' to play    |" );
-        System.out.println( "|    'q' to quit    |" );
-        System.out.println( "|                   |" );
-        System.out.println( "+-------------------+" );
-    }
-
-    public void showOver() {
-        System.out.println( "The game is over." );
-    }
-
-    public void showExit() {
-        System.out.println( "Goodbye." );
-    }
-
-    public void showBoard() {
-        Board board = this.game.getBoard();
-        int length = board.get().size();
-        List squares = board.get();
-        Player player;
-
-        System.out.println( "+-------------------+" );
-        System.out.println( "|                   |" );
-        System.out.println( "|      |     |      |" );
-        System.out.println(
-                "|   "  + this.showSquare(0) + "  " +
-                        "|  "  + this.showSquare(1) + "  " +
-                        "|  "  + this.showSquare(2) + "   " +
-                        "|"
-        );
-        System.out.println( "|      |     |      |" );
-        System.out.println( "|  ----+-----+----  |" );
-        System.out.println( "|      |     |      |" );
-        System.out.println(
-                "|   "  + this.showSquare(3) + "  " +
-                        "|  "  + this.showSquare(4) + "  " +
-                        "|  "  + this.showSquare(5) + "   " +
-                        "|"
-        );
-        System.out.println( "|      |     |      |" );
-        System.out.println( "|  ----+-----+----  |" );
-        System.out.println( "|      |     |      |" );
-        System.out.println(
-                "|   "  + this.showSquare(6) + "  " +
-                        "|  "  + this.showSquare(7) + "  " +
-                        "|  "  + this.showSquare(8) + "   " +
-                        "|"
-        );
-        System.out.println( "|      |     |      |" );
-        System.out.println( "|                   |" );
-        System.out.println( "+-------------------+" );
-        if ( this.message != null ) {
-            System.out.println( message );
-            this.message = null;
-        }
-        if ( game.isActive() ) {
-            System.out.println( "Enter your square, or 'q' to quit." );
-            player = this.game.getTurnPlayer();
-            System.out.println( player.getName() + " (" + player.getSymbol() +
-                    ") move: " );
-        }
-    }
-
-    public String showSquare(int position) {
-        return this.game.showSquare(position);
     }
 }

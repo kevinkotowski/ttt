@@ -134,13 +134,13 @@ public class GameTest {
         game.start();
         assertEquals( true, game.isActive() );
 
-        assertEquals( "1", game.showSquare(0) );
+        assertEquals( "1", game.getSquare(0) );
         game.move(0);
-        assertEquals( "X", game.showSquare(0) );
+        assertEquals( "X", game.getSquare(0) );
 
-        assertEquals( "2", game.showSquare(1) );
+        assertEquals( "2", game.getSquare(1) );
         game.move(1);
-        assertEquals( "O", game.showSquare(1) );
+        assertEquals( "O", game.getSquare(1) );
     }
 
     @Test
@@ -154,10 +154,10 @@ public class GameTest {
     }
 
     @Test
-    public void showSquare() throws Exception {
+    public void getSquare() throws Exception {
         Game game = new Game();
         game.start();
-        assertEquals( "1", game.showSquare(0) );
+        assertEquals( "1", game.getSquare(0) );
     }
 
     @Test
