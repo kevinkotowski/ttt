@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a369d829-d5f8-4998-9a98-f7b917d9f2a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Strategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kkotowski.ttt.iml" afterPath="$PROJECT_DIR$/kkotowski.ttt.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
     </list>
     <ignored path="kkotowski.ttt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,13 +29,20 @@
           <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+                <state relative-caret-position="495">
+                  <caret line="126" column="27" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
                   <folding>
-                    <element signature="e#4030#4031#0" expanded="false" />
-                    <element signature="e#4087#4088#0" expanded="false" />
-                    <element signature="e#4117#4118#0" expanded="false" />
-                    <element signature="e#4165#4166#0" expanded="false" />
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#832#833#0" expanded="true" />
+                    <element signature="e#866#867#0" expanded="true" />
+                    <element signature="e#2165#2166#0" expanded="true" />
+                    <element signature="e#2196#2197#0" expanded="true" />
+                    <element signature="e#2228#2229#0" expanded="true" />
+                    <element signature="e#2275#2276#0" expanded="true" />
+                    <element signature="e#3576#3577#0" expanded="true" />
+                    <element signature="e#3632#3633#0" expanded="true" />
+                    <element signature="e#6183#6184#0" expanded="true" />
+                    <element signature="e#6236#6237#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -152,8 +152,8 @@
           <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
-                  <caret line="164" column="22" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -220,12 +220,12 @@
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/AppTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Strategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
       </list>
     </option>
   </component>
@@ -302,6 +302,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kkotowski.ttt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -859,7 +901,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1676" height="1027" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -869,7 +911,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -940,10 +982,17 @@
         <state relative-caret-position="675">
           <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding>
-            <element signature="e#4030#4031#0" expanded="false" />
-            <element signature="e#4087#4088#0" expanded="false" />
-            <element signature="e#4117#4118#0" expanded="false" />
-            <element signature="e#4165#4166#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
+            <element signature="e#6236#6237#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1074,10 +1123,17 @@
         <state relative-caret-position="360">
           <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
-            <element signature="e#4030#4031#0" expanded="false" />
-            <element signature="e#4087#4088#0" expanded="false" />
-            <element signature="e#4117#4118#0" expanded="false" />
-            <element signature="e#4165#4166#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
+            <element signature="e#6236#6237#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1184,10 +1240,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4030#4031#0" expanded="false" />
-            <element signature="e#4087#4088#0" expanded="false" />
-            <element signature="e#4117#4118#0" expanded="false" />
-            <element signature="e#4165#4166#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
+            <element signature="e#6236#6237#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1369,16 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="164" column="22" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyEasy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1401,15 +1454,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="495">
+          <caret line="126" column="27" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
           <folding>
-            <element signature="e#4030#4031#0" expanded="false" />
-            <element signature="e#4087#4088#0" expanded="false" />
-            <element signature="e#4117#4118#0" expanded="false" />
-            <element signature="e#4165#4166#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#6183#6184#0" expanded="true" />
+            <element signature="e#6236#6237#0" expanded="true" />
           </folding>
         </state>
       </provider>

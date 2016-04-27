@@ -124,7 +124,7 @@ public class App
 
         System.out.println( "Selected: " + gameInput );
         if ( gameInput.equals("q") ) {
-//            this.game.quit();
+            this.exit = true;
 
             System.out.println( "Quitting..." );
         } else {
