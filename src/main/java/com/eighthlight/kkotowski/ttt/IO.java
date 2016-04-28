@@ -29,16 +29,10 @@ public class IO {
 
         if (response.length() > 1) {
             this.output.println( "(only the first character will be used.)\n" );
-        } else
-        if (response.length() == 1) {
             response = response.substring(0, 1);
         }
         return response;
     }
-
-    public String nextLine() {
-        return this.input.nextLine();
-    };
 
     public void println(String buffer) {
         this.output.println( buffer );
