@@ -10,22 +10,12 @@ import java.util.Random;
 public interface Strategy {
     public int recommend(Board board);
 
-    default public int next(Board board) {
-        List<Integer> available;
-        Integer position;
-
-        available = board.availableSquares();
-        position = available.get(0) + 1;
-
-        return position;
-    }
-
     default public int random(Board board) {
         List<Integer> available;
         Integer position;
         Random random = new Random();
 
-        available = board.availableSquares();
+        available = board.getAvailableSquares();
         int n = random.nextInt( available.size() );
         position = available.get(n) + 1;
 

@@ -21,7 +21,8 @@ public class Player {
         this.strategy = new StrategyHard();
     }
 
-    public Player(String name, String symbol, Mode mode, Game.Strategy gameStrategy) {
+    public Player(String name, String symbol, Mode mode,
+                  Game.Strategy gameStrategy) {
         this.setName(name);
         this.setSymbol(symbol);
         this.setMode(mode);

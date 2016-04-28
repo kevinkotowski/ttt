@@ -12,13 +12,11 @@ public class StrategyHard implements Strategy {
 
     private Integer unbeatable(Board board) {
         Integer position;
-        List<Integer> availableSquares = board.availableSquares();
-        int availableSize = availableSquares.size();
         int[] best = new int[2];
         // best[0] stores the score
         // best[1] stores the move move
 
-        if ( availableSize == board.get().size() ) {
+        if ( board.isEmpty() ) {
             // You can win and protect from losing with any starting move,
             // so return random position
             position = this.random(board);
@@ -30,33 +28,27 @@ public class StrategyHard implements Strategy {
     }
 
     private int[] minimax(Board board, int moves, Board.Mark maxPlayer) {
-        List<Integer> availableSquares = board.availableSquares();
+        List<Integer> availableSquares = board.getAvailableSquares();
         int availableSize = availableSquares.size();
         Board.Mark currentPlayer;
         Game.Winner winner;
         int[] best = new int[2];
-        // best[0] stores the score
-        // best[1] stores the move move
 
-        currentPlayer = (availableSize % 2 == 1) ? Board.Mark.PLAYER1 : Board.Mark.PLAYER2;
-
-//        System.out.println("...minimax: --------------------------------------" );
-//        System.out.println("...minimax moves: " + moves + " player: " + currentPlayer );
-//        for (int z = 0; z < availableSize; z++) {
-//            System.out.println("...minimax available: " + availableSquares.get(z) );
-//        }
+        currentPlayer = (availableSize % 2 == 1) ?
+                Board.Mark.PLAYER1 : Board.Mark.PLAYER2;
 
         winner = board.getWinner();
         if (winner != Game.Winner.NONE) {
-//            System.out.println("...minimax winner: " + winner );
             int score = 0;
             int[] response = new int[2];
             switch (winner) {
                 case PLAYER1:
-                    score = (maxPlayer == Board.Mark.PLAYER1) ? 10 - moves : moves -10;
+                    score = (maxPlayer == Board.Mark.PLAYER1) ?
+                            10 - moves : moves -10;
                     break;
                 case PLAYER2:
-                    score = (maxPlayer == Board.Mark.PLAYER2) ? 10 - moves : moves -10;
+                    score = (maxPlayer == Board.Mark.PLAYER2) ?
+                            10 - moves : moves -10;
                     break;
                 case TIE:
                     score = 0;
@@ -72,7 +64,6 @@ public class StrategyHard implements Strategy {
             int[] maxResult = new int[2];
             best[0] = -1000; //score
             for (int x = 0; x < availableSize; x++) {
-//                System.out.println("...minimax max move: " + x + ", " + availableSquares.get(x) );
                 Board maxBoard = board.copy();
                 maxBoard.setSquare(availableSquares.get(x), currentPlayer);
                 maxResult = minimax(maxBoard, moves + 1, maxPlayer);
@@ -85,7 +76,6 @@ public class StrategyHard implements Strategy {
             int[] minResult = new int[2];
             best[0] = 1000; //score
             for (int y = 0; y < availableSize; y++) {
-//                System.out.println("...minimax max move: " + y + ", " + availableSquares.get(y) );
                 Board minBoard = board.copy();
                 minBoard.setSquare(availableSquares.get(y), currentPlayer);
                 minResult = minimax(minBoard, moves + 1, maxPlayer);

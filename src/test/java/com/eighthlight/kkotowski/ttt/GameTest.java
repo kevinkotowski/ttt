@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -43,7 +44,7 @@ public class GameTest {
     }
 
     @Test
-    public void gameConfigure() throws Exception {
+    public void gamePlayerConfigure() throws Exception {
         Game game = new Game();
         List<Player> players = new ArrayList();
 
@@ -61,7 +62,7 @@ public class GameTest {
     }
 
     @Test
-    public void changePlayer() throws Exception {
+    public void changePlayerTurn() throws Exception {
         Game game = new Game();
         game.start();
 
@@ -71,7 +72,7 @@ public class GameTest {
     }
 
     @Test
-    public void getTurnPlayerMode() throws Exception {
+    public void getCurrentTurnPlayerMode() throws Exception {
         Game game = new Game();
         Player player = new Player();
         game.start();
@@ -94,7 +95,7 @@ public class GameTest {
     }
 
     @Test
-    public void getTurnRecommendation() throws Exception {
+    public void getTurnRecommendationComputer() throws Exception {
         Game game = new Game();
         game.start();
         game.setTurn(Game.Turn.PLAYER2);
@@ -104,17 +105,14 @@ public class GameTest {
     }
 
     @Test
-    public void start() throws Exception {
+    public void startVerifyBoard() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.isActive() );
         game.start();
-        assertEquals( true, game.isActive() );
 
         Board board = game.getBoard();
-        int boardSize = board.get().size();
-        assertEquals( 9,  boardSize);
+        assertEquals( 9,  board.getSize() );
 
-        for (int x = 0; x < boardSize; x++) {
+        for (int x = 0; x < board.getSize(); x++) {
             assertEquals( Board.Mark.AVAILABLE, board.getSquare(x) );
         }
 
@@ -122,17 +120,15 @@ public class GameTest {
     }
 
     @Test(expected = RuntimeException.class)
-    public void moveInvalid() throws Exception {
+    public void playerInvalidMove() throws Exception {
         Game game = new Game();
         game.move(9);
     }
 
     @Test
-        public void move() throws Exception {
+        public void playerMoves() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.isActive() );
         game.start();
-        assertEquals( true, game.isActive() );
 
         assertEquals( "1", game.getSquare(0) );
         game.move(0);
@@ -146,11 +142,11 @@ public class GameTest {
     @Test
     public void quit() throws Exception {
         Game game = new Game();
-        assertEquals( false, game.isActive() );
+        assertFalse( game.isActive() );
         game.start();
-        assertEquals( true, game.isActive() );
+        assertTrue( game.isActive() );
         game.quit();
-        assertEquals( false, game.isActive() );
+        assertFalse( game.isActive() );
     }
 
     @Test
@@ -164,114 +160,6 @@ public class GameTest {
     public void checkWinner() throws Exception {
         Game game = new Game();
         game.start();
-
-        // horizontal 012
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(0); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(1); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(2); //p1
-        assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        game.quit();
-
-        // horizontal 345
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(3); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(4); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(5); //p1
-        assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        game.quit();
-
-        // horizontal 678
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(0); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(1); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(3); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(8); //p2
-        assertEquals( Game.Winner.PLAYER2, game.getWinner() );
-        game.quit();
-
-        // vertical 036
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(0); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(4); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(3); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p1
-        assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        game.quit();
-
-        // vertical 147
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(0); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(1); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(2); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(4); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(8); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.PLAYER2, game.getWinner() );
-        game.quit();
-
-        // vertical 258
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(2); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(5); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(8); //p1
-        assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        game.quit();
-
-        // diagonal 048
-        game.start();
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(0); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(6); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(4); //p1
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(7); //p2
-        assertEquals( Game.Winner.NONE, game.getWinner() );
-        game.move(8); //p1
-        assertEquals( Game.Winner.PLAYER1, game.getWinner() );
-        game.quit();
 
         // diagonal 246
         game.start();

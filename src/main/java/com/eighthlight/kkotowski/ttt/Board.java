@@ -21,41 +21,8 @@ public class Board {
         }
     }
 
-    public List<Mark> get() {
-        return this.squares;
-    }
-
-    public Mark getSquare(int position) {
-        return this.squares.get(position);
-    }
-
-    public void setSquare(int position, Mark mark) {
-        if ( this.available(position) ) {
-            this.squares.set(position, mark);
-        } else {
-            throw new RuntimeException("Position is not available.");
-        }
-    }
-
-    private boolean available(int position) {
-        if ( (position < -1) || (position > 8) ) {
-            throw new RuntimeException("Must place in position 0-8");
-        }
-        if ( (this.squares.get(position) != Mark.AVAILABLE) ) {
-            return false;
-        }
-        return true;
-    }
-
-    public List<Integer> availableSquares () {
-        List<Integer> response = new ArrayList<Integer>(this.size);
-
-        for (int x = 0; x < this.size; x++) {
-            if (this.getSquare(x) == Board.Mark.AVAILABLE) {
-                response.add(x);
-            }
-        }
-        return response;
+    public int getSize() {
+        return this.size;
     }
 
     public Board copy() {
@@ -67,15 +34,52 @@ public class Board {
         return copyBoard;
     }
 
-    public Boolean full() {
+    public Boolean isEmpty() {
+        return this.getSize() == getAvailableSquares().size();
+    }
+
+    public Boolean isFull() {
         Boolean response = false;
-        response = ( 0 == this.availableSquares().size() );
+        response = ( 0 == this.getAvailableSquares().size() );
         return response;
+    }
+
+    private boolean isAvailable(int position) {
+        if ( (position < -1) || (position > 8) ) {
+            throw new RuntimeException("Must place in position 0-8");
+        }
+        if ( (this.squares.get(position) != Mark.AVAILABLE) ) {
+            return false;
+        }
+        return true;
+    }
+
+    public List<Integer> getAvailableSquares () {
+        List<Integer> response = new ArrayList<Integer>(this.size);
+
+        for (int x = 0; x < this.size; x++) {
+            if (this.getSquare(x) == Board.Mark.AVAILABLE) {
+                response.add(x);
+            }
+        }
+        return response;
+    }
+
+    public Mark getSquare(int position) {
+        return this.squares.get(position);
+    }
+
+    public void setSquare(int position, Mark mark) {
+        if ( this.isAvailable(position) ) {
+            this.squares.set(position, mark);
+        } else {
+            throw new RuntimeException("Position is not available.");
+        }
     }
 
     public Game.Winner getWinner() {
         Game.Winner winner = Game.Winner.NONE;
-        int[][] winCombos = winCombinations();
+        int[][] winCombos = getWinCombinations();
         int x;
         int[] winCombo = null;
         Board.Mark mark = null;
@@ -97,13 +101,13 @@ public class Board {
                 }
             }
         }
-        if ( winner == Game.Winner.NONE && this.full() ) {
+        if ( winner == Game.Winner.NONE && this.isFull() ) {
             winner = Game.Winner.TIE;
         }
         return winner;
     }
 
-    public static int[][] winCombinations () {
+    public static int[][] getWinCombinations () {
         int[][] response = new int[8][3];
 
         // horizontal

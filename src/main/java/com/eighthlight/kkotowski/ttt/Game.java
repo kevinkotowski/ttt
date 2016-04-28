@@ -12,17 +12,9 @@ public class Game {
     private Turn turn = null;
     private Boolean active = false;
 
-    public enum Action {
-        START,
-        MOVE,
-        ENDGAME,
-        QUIT
-    }
-
     public enum Strategy {
         HUMAN,
         EASY,
-        MEDIUM,
         HARD
     }
 

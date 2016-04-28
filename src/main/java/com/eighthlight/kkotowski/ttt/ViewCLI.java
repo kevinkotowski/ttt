@@ -29,8 +29,6 @@ public class ViewCLI implements View{
     };
 
     public void showBoard(Board board) {
-        int length = board.get().size();
-        List squares = board.get();
         Player player;
 
         this.io.println( "+-------------------+" );

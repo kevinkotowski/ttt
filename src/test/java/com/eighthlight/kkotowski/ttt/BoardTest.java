@@ -2,10 +2,6 @@ package com.eighthlight.kkotowski.ttt;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -14,15 +10,21 @@ import static org.junit.Assert.assertEquals;
  */
 public class BoardTest {
     @Test
-    public void getBoard() throws Exception {
+    public void verifyBoardInitAndSize() throws Exception {
         Board board = new Board();
-        List<Board.Mark> boardMarks = board.get();
-        int length = boardMarks.size();
-        assertEquals( 9, length );
+        assertEquals( 9, board.getSize() );
+    }
 
-        for (int x = 0; x < length; x++) {
-            assertEquals( Board.Mark.AVAILABLE, boardMarks.get(x) );
-        }
+    @Test
+    public void verifyMarksAndSquares() throws Exception {
+        Board board = new Board();
+        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 0 ) );
+        board.setSquare( 0, Board.Mark.PLAYER1 );
+        assertEquals( Board.Mark.PLAYER1, board.getSquare( 0 ) );
+
+        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 1 ) );
+        board.setSquare( 1, Board.Mark.PLAYER2 );
+        assertEquals( Board.Mark.PLAYER2, board.getSquare( 1 ) );
     }
 
     @Test
@@ -39,12 +41,10 @@ public class BoardTest {
         origBoard.setSquare( 2, Board.Mark.PLAYER2 );
 
         copyBoard = origBoard.copy();
-        int length = origBoard.get().size();
+        int length = origBoard.getSize();
 
         for (int x = 0; x < length; x++) {
             assertEquals( origBoard.getSquare(x), copyBoard.getSquare(x) );
-//            System.out.println("...BoardTest.copy origBoard(" + x + "): " + origBoard.getSquare(x) );
-//            System.out.println("...BoardTest.copy copyBoard(" + x + "): " + copyBoard.getSquare(x) );
         }
     }
 
@@ -55,58 +55,24 @@ public class BoardTest {
     }
 
     @Test
-    public void squares() throws Exception {
-        Board board = new Board();
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 0 ) );
-        board.setSquare( 0, Board.Mark.PLAYER1 );
-        assertEquals( Board.Mark.PLAYER1, board.getSquare( 0 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 1 ) );
-        board.setSquare( 1, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 1 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 2 ) );
-        board.setSquare( 2, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 2 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 3 ) );
-        board.setSquare( 3, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 3 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 4 ) );
-        board.setSquare( 4, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 4 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 5 ) );
-        board.setSquare( 5, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 5 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 6 ) );
-        board.setSquare( 6, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 6 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 7 ) );
-        board.setSquare( 7, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 7 ) );
-
-        assertEquals( Board.Mark.AVAILABLE, board.getSquare( 8 ) );
-        board.setSquare( 8, Board.Mark.PLAYER2 );
-        assertEquals( Board.Mark.PLAYER2, board.getSquare( 8 ) );
-    }
-
-    @Test
     public void availableSquares() throws Exception {
         Board board = new Board();
-        assertEquals( 9, board.availableSquares().size() );
+        assertEquals( 9, board.getAvailableSquares().size() );
 
         board.setSquare(0, Board.Mark.PLAYER1);
-        assertEquals( 8, board.availableSquares().size() );
+        assertEquals( 8, board.getAvailableSquares().size() );
     }
 
     @Test
-    public void full() throws Exception {
+    public void isEmpty() throws Exception {
         Board board = new Board();
-        assertEquals( false, board.full() );
+        assertEquals(true, board.isEmpty());
+    }
+
+    @Test
+    public void isFull() throws Exception {
+        Board board = new Board();
+        assertEquals( false, board.isFull() );
 
         board.setSquare(0, Board.Mark.PLAYER1);
         board.setSquare(1, Board.Mark.PLAYER1);
@@ -120,8 +86,8 @@ public class BoardTest {
         board.setSquare(7, Board.Mark.PLAYER1);
         board.setSquare(8, Board.Mark.PLAYER1);
 
-        assertEquals( 0, board.availableSquares().size() );
-        assertEquals( true, board.full() );
+        assertEquals( 0, board.getAvailableSquares().size() );
+        assertEquals( true, board.isFull() );
     }
 
     @Test
@@ -129,7 +95,7 @@ public class BoardTest {
         Game game = new Game();
         int[][] combinations = new int[8][3];
 
-        combinations = Board.winCombinations();
+        combinations = Board.getWinCombinations();
         assertEquals( 8, combinations.length );
 
         // horizontal
