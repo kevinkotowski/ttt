@@ -5,11 +5,12 @@ package com.eighthlight.kkotowski.ttt;
  */
 public interface View {
     public void setMessage(String message);
-    public String getMessage();
     public void showWelcome();
     public void showMenu();
-    public void showOver();
-    public void showExit();
     public void showBoard(Board board);
     public String getSquare(int position);
+    public void showMove(String move);
+    public void showQuit();
+    public void showEndgame(Game.Winner winner);
+    public void showExit();
 }
