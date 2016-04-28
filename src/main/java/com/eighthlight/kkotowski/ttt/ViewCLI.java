@@ -15,10 +15,6 @@ public class ViewCLI implements View{
         this.game = game;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    };
-
     public void showWelcome() {
         this.io.println( "Java Tic Tac Toe" );
     };
@@ -77,6 +73,10 @@ public class ViewCLI implements View{
             this.io.println( player.getName() + " (" + player.getSymbol() +
                     ") move: " );
         }
+    };
+
+    public void setMessage(String message) {
+        this.message = message;
     };
 
     public void showMove(String move) {
