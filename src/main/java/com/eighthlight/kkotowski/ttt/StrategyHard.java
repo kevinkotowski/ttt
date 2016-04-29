@@ -40,7 +40,6 @@ public class StrategyHard implements Strategy {
         winner = board.getWinner();
         if (winner != Game.Winner.NONE) {
             int score = 0;
-            int[] response = new int[2];
             switch (winner) {
                 case PLAYER1:
                     score = (maxPlayer == Board.Mark.PLAYER1) ?
@@ -54,9 +53,7 @@ public class StrategyHard implements Strategy {
                     score = 0;
                     break;
             }
-            response[0] = score;
-            response[1] = -1;
-            return response;
+            return new int[] {score, -1};
         }
 
         if (maxPlayer == null) { maxPlayer = currentPlayer; }
