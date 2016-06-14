@@ -14,29 +14,26 @@ public class TttApi {
         String status;
         boolean active = game.isActive();
 
-        status = "active:" + active +"\n";
-        status += "winner:" + game.getWinner().toString() +"\n";
-        status += "page:" + game.getPageName() + "\n";
-//        System.out.println("...api.getStatus \n" + status);
+        status = "active=" + active +"\n";
+        status += "winner=" + game.getWinner().toString() +"\n";
+        status += "page=" + game.getPageName() + "\n";
         return status;
     }
 
     public String getBoard() {
         String content = "";
-        content += "turn:" + game.getTurn().toString() +"\n";
-        content += "turn_player_name:"
+        content += "turn=" + game.getTurn().toString() +"\n";
+        content += "turn_player_name="
                 + game.getTurnPlayerName().toString() + "\n";
-        content += "move_reco:" + game.getTurnRecommendation() + "\n";
-        content += "board:" + game.getBoardData() + "\n";
-//        System.out.println("...api.getBoard \n" + content);
+        content += "move_reco=" + game.getTurnRecommendation() + "\n";
+        content += "board=" + game.getBoardData() + "\n";
         return content;
     }
 
     public String getEndgame() {
         String content = "";
-        content += "board:" + game.getBoardData() + "\n";
-        content += "winner_player_name:" + game.getWinnerPlayerName() + "\n";
-//        System.out.println("...api.getEndgame \n" + content);
+        content += "board=" + game.getBoardData() + "\n";
+        content += "winner_player_name=" + game.getWinnerPlayerName() + "\n";
         return content;
     }
 
