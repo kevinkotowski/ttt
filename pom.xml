@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.8thlight.kkotowski.ttt</groupId>
-  <artifactId>kkotowski.ttt</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>ttt</artifactId>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>kkotowski.ttt</name>

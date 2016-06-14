@@ -3,10 +3,10 @@ package com.eighthlight.kkotowski.ttt;
 /**
  * Created by kevinkotowski on 6/13/16.
  */
-public class Api {
+public class TttApi {
     private Game game;
 
-    public Api() {
+    public TttApi() {
         this.game = new Game();
     }
 

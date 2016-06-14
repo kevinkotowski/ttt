@@ -1,18 +1,17 @@
 package com.eighthlight.kkotowski.ttt;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 /**
  * Created by kevinkotowski on 6/13/16.
  */
-public class ApiTest {
+public class TttApiTest {
     @Test
     public void initApiGetDefaultStatus() throws Exception {
-        Api api = new Api();
+        TttApi tttApi = new TttApi();
 
-        String status = api.getStatus();
+        String status = tttApi.getStatus();
         assertTrue( status.contains("active:false") );
         assertTrue( status.contains("winner:NONE") );
         assertTrue( status.contains("page:menu") );
@@ -20,10 +19,10 @@ public class ApiTest {
 
     @Test
     public void startGameGetStatus() throws Exception {
-        Api api = new Api();
-        api.postStart();
+        TttApi tttApi = new TttApi();
+        tttApi.postStart();
 
-        String status = api.getStatus();
+        String status = tttApi.getStatus();
         assertTrue( status.contains("active:true") );
         assertTrue( status.contains("winner:NONE") );
         assertTrue( status.contains("page:board") );
@@ -31,10 +30,10 @@ public class ApiTest {
 
     @Test
     public void getBoard() throws Exception {
-        Api api = new Api();
-        api.postStart();
+        TttApi tttApi = new TttApi();
+        tttApi.postStart();
 
-        String content = api.getBoard();
+        String content = tttApi.getBoard();
         assertTrue( content.contains("turn:PLAYER1") );
         assertTrue( content.contains("turn_player_name:Homer") );
         assertTrue( content.contains("move_reco:X") );
@@ -43,29 +42,29 @@ public class ApiTest {
 
     @Test
     public void postMenuSelection() throws Exception {
-        Api api = new Api();
-        api.postStart();
+        TttApi tttApi = new TttApi();
+        tttApi.postStart();
 
-        api.postMove("8");
-        assertTrue( api.getBoard().contains("0,0,0,0,0,0,0,0,1") );
+        tttApi.postMove("8");
+        assertTrue( tttApi.getBoard().contains("0,0,0,0,0,0,0,0,1") );
     }
 
     @Test
     public void getEndgame() throws Exception {
-        Api api = new Api();
-        api.postStart();
-        api.postMove("0");
-        api.postMove("4");
-        api.postMove("1");
-        api.postMove("6");
-        api.postMove("2");
+        TttApi tttApi = new TttApi();
+        tttApi.postStart();
+        tttApi.postMove("0");
+        tttApi.postMove("4");
+        tttApi.postMove("1");
+        tttApi.postMove("6");
+        tttApi.postMove("2");
 
-        String status = api.getStatus();
+        String status = tttApi.getStatus();
         assertTrue( status.contains("active:true") );
         assertTrue( status.contains("winner:PLAYER1") );
         assertTrue( status.contains("page:endgame") );
 
-        String content = api.getEndgame();
+        String content = tttApi.getEndgame();
         assertTrue( content.contains("board:1,1,1,0,2,0,2,0,0") );
         assertTrue( status.contains("winner:PLAYER1") );
     }

@@ -1,7 +1,5 @@
 package com.eighthlight.kkotowski.ttt;
 
-import java.util.regex.Pattern;
-
 public class App
 {
     private IO io = null;
