@@ -2,8 +2,11 @@ package com.eighthlight.kkotowski.ttt;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by kevinkotowski on 4/19/16.
@@ -61,6 +64,15 @@ public class BoardTest {
 
         board.setSquare(0, Board.Mark.PLAYER1);
         assertEquals( 8, board.getAvailableSquares().size() );
+    }
+
+    @Test
+    public void getData() throws Exception {
+        Board board = new Board();
+        List<Integer> boardData = board.getData();
+        for (Integer square : boardData) {
+            assertTrue( square.equals(0) );
+        }
     }
 
     @Test

@@ -65,6 +65,24 @@ public class Board {
         return response;
     }
 
+    public List<Integer> getData() {
+        List<Integer> board = new ArrayList<Integer>(this.size);
+        for (Mark mark : this.squares) {
+            switch (mark) {
+                case PLAYER1:
+                    board.add(1);
+                    break;
+                case PLAYER2:
+                    board.add(2);
+                    break;
+                case AVAILABLE:
+                    board.add(0);
+                    break;
+            }
+        }
+        return board;
+    }
+
     public Mark getSquare(int position) {
         return this.squares.get(position);
     }

@@ -20,13 +20,6 @@ public class GameTest {
 
         players = game.getPlayers();
 
-        for(Player player : players) {
-            System.out.println( "...GameTest.defaults name: " + player.getSymbol() +
-                    ", " + player.getName() +
-                    ", " + player.getMode()
-            );
-        }
-
         Player player = new Player();
         player = players.get(0);
         assertEquals( "Homer", player.getName() );
@@ -87,11 +80,11 @@ public class GameTest {
         assertEquals( StrategyHard.class, player.getStrategy().getClass() );
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void getTurnRecommendationHuman() throws Exception {
         Game game = new Game();
         game.start();
-        game.getTurnRecommendation();
+        assertEquals("X", game.getTurnRecommendation());
     }
 
     @Test

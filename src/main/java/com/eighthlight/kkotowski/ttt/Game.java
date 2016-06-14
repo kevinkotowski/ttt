@@ -45,6 +45,16 @@ public class Game {
 
     public Board getBoard() { return this.board; };
 
+    public String getBoardData() {
+        String values = "";
+        List<Integer> data = this.board.getData();
+        for (Integer value : data) {
+            values += value.toString() + ",";
+        }
+        values = values.substring(0, values.length()-1);
+        return values;
+    }
+
     public List<Player> getPlayers() {
         return this.players;
     }
@@ -63,6 +73,20 @@ public class Game {
         return response;
     }
 
+    public String getTurnPlayerName() {
+        String name;
+        if (this.turn == null) {
+            name = "NONE";
+        } else {
+            if (this.turn == Turn.PLAYER1) {
+                name = this.players.get(0).getName();
+            } else {
+                name = this.players.get(1).getName();
+            }
+        }
+        return name;
+    }
+
     public void setTurn(Turn turn) {
         this.turn = turn;
     }
@@ -72,7 +96,7 @@ public class Game {
         String move;
 
         if ( player.getMode() == Player.Mode.HUMAN ) {
-            throw new RuntimeException("No recommendations for HUMAN players");
+            move = "X";
         } else {
             move = Integer.toString( player.getStrategy().recommend(this.board) );
         }
@@ -93,6 +117,20 @@ public class Game {
                 break;
         }
         return response;
+    }
+
+    public String getPageName() {
+        String page;
+        if (this.active) {
+            page = "board";
+        } else {
+            if (this.getWinner() == Winner.NONE) {
+                page = "menu";
+            } else {
+                page = "endgame";
+            }
+        }
+        return page;
     }
 
     public void start() {
@@ -129,11 +167,30 @@ public class Game {
 
     public Winner getWinner() {
         Winner winner;
-        winner = this.board.getWinner();
+        if (this.board != null) {
+            winner = this.board.getWinner();
+        } else {
+            winner = Winner.NONE;
+        }
 
         if (winner != Winner.NONE) {
             this.setActive(false);
         }
         return winner;
     }
+
+    public String getWinnerPlayerName() {
+        String name;
+        if (this.turn == null) {
+            name = "NONE";
+        } else {
+            if (this.turn == Turn.PLAYER1) {
+                name = this.players.get(0).getName();
+            } else {
+                name = this.players.get(1).getName();
+            }
+        }
+        return name;
+    }
+
 }
