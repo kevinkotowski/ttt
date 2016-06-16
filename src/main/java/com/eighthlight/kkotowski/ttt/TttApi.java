@@ -16,17 +16,20 @@ public class TttApi {
 
         status = "active=" + active +"\n";
         status += "winner=" + game.getWinner().toString() +"\n";
-        status += "page=" + game.getPageName() + "\n";
         return status;
     }
 
     public String getBoard() {
         String content = "";
-        content += "turn=" + game.getTurn().toString() +"\n";
-        content += "turn_player_name="
-                + game.getTurnPlayerName().toString() + "\n";
-        content += "move_reco=" + game.getTurnRecommendation() + "\n";
-        content += "board=" + game.getBoardData() + "\n";
+        if (!game.isActive() && (game.getWinner() == Game.Winner.NONE) ) {
+            content = "active=false";
+        } else {
+            content += "turn=" + game.getTurn().toString() +"\n";
+            content += "turn_player_name="
+                    + game.getTurnPlayerName().toString() + "\n";
+            content += "move_reco=" + game.getTurnRecommendation() + "\n";
+            content += "board=" + game.getBoardData() + "\n";
+        }
         return content;
     }
 
@@ -43,6 +46,10 @@ public class TttApi {
 
     public void postMove(String move) {
         this.game.move(Integer.parseInt(move));
+    }
+
+    public void postExit() {
+        this.game.quit();
     }
 
 }

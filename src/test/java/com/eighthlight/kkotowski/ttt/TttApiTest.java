@@ -14,7 +14,6 @@ public class TttApiTest {
         String status = tttApi.getStatus();
         assertTrue( status.contains("active=false") );
         assertTrue( status.contains("winner=NONE") );
-        assertTrue( status.contains("page=menu") );
     }
 
     @Test
@@ -25,7 +24,6 @@ public class TttApiTest {
         String status = tttApi.getStatus();
         assertTrue( status.contains("active=true") );
         assertTrue( status.contains("winner=NONE") );
-        assertTrue( status.contains("page=board") );
     }
 
     @Test
@@ -62,10 +60,22 @@ public class TttApiTest {
         String status = tttApi.getStatus();
         assertTrue( status.contains("active=true") );
         assertTrue( status.contains("winner=PLAYER1") );
-        assertTrue( status.contains("page=endgame") );
 
-        String content = tttApi.getEndgame();
-        assertTrue( content.contains("board=1,1,1,0,2,0,2,0,0") );
-        assertTrue( status.contains("winner=PLAYER1") );
+        String endgame = tttApi.getEndgame();
+        assertTrue( endgame.contains("board=1,1,1,0,2,0,2,0,0") );
+        assertTrue( endgame.contains("winner_player_name=Homer") );
+    }
+
+    @Test
+    public void quitGame() throws Exception {
+        TttApi tttApi = new TttApi();
+        tttApi.postStart();
+
+        String status = tttApi.getStatus();
+        assertTrue( status.contains("active=true") );
+
+        tttApi.postExit();
+        status = tttApi.getStatus();
+        assertTrue( status.contains("active=false") );
     }
 }

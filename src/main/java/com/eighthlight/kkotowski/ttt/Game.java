@@ -119,20 +119,6 @@ public class Game {
         return response;
     }
 
-    public String getPageName() {
-        String page;
-        if (this.active) {
-            page = "board";
-        } else {
-            if (this.getWinner() == Winner.NONE) {
-                page = "menu";
-            } else {
-                page = "endgame";
-            }
-        }
-        return page;
-    }
-
     public void start() {
         this.setActive(true);
         this.board = null;
@@ -141,8 +127,6 @@ public class Game {
     }
 
     public void move(int position) {
-        Game.Winner winner;
-
         if ( (position > -1) && (position < 9) ) {
             switch (this.turn) {
                 case PLAYER1:
@@ -184,7 +168,7 @@ public class Game {
         if (this.turn == null) {
             name = "NONE";
         } else {
-            if (this.turn == Turn.PLAYER1) {
+            if (this.getWinner() == Winner.PLAYER1) {
                 name = this.players.get(0).getName();
             } else {
                 name = this.players.get(1).getName();
