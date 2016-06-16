@@ -156,6 +156,10 @@ public class Game {
         } else {
             winner = Winner.NONE;
         }
+
+        if (winner != Winner.NONE) {
+            this.setActive(false);
+        }
         return winner;
     }
 
