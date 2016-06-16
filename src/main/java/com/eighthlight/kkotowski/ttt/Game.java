@@ -37,7 +37,13 @@ public class Game {
                 Strategy.HARD) );
     }
 
-    public Boolean isActive() { return this.active; };
+    public Boolean isActive() {
+        Winner winner = this.getWinner();
+        if (winner != Winner.NONE) {
+            this.setActive(false);
+        }
+        return this.active;
+    };
 
     public void setActive(Boolean active) {
         this.active = active;
@@ -155,10 +161,6 @@ public class Game {
             winner = this.board.getWinner();
         } else {
             winner = Winner.NONE;
-        }
-
-        if (winner != Winner.NONE) {
-            this.setActive(false);
         }
         return winner;
     }
