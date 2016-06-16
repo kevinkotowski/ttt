@@ -34,7 +34,7 @@ public class TttApiTest {
         String content = tttApi.getBoard();
         assertTrue( content.contains("turn=PLAYER1") );
         assertTrue( content.contains("turn_player_name=Homer") );
-        assertTrue( content.contains("move_reco=X") );
+        assertTrue( content.contains("move_reco=") );
         assertTrue( content.contains("board=0,0,0,0,0,0,0,0,0") );
     }
 

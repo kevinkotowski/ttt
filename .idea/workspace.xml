@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/TttApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/TttApiTest.java" />
     </list>
     <ignored path="kkotowski.ttt.iws" />
@@ -44,11 +45,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TttApi.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TttApi.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state relative-caret-position="315">
+                  <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -59,7 +60,11 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
                   <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                    <element signature="e#934#935#0" expanded="false" />
+                    <element signature="e#979#980#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -79,16 +84,19 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="600">
                   <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="e#198#199#0" expanded="false" />
+                    <element signature="e#243#244#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="682">
-                  <caret line="171" column="30" selection-start-line="171" selection-start-column="30" selection-end-line="171" selection-end-column="30" />
+                <state relative-caret-position="2205">
+                  <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -99,7 +107,18 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1095">
                   <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-                  <folding />
+                  <folding>
+                    <element signature="e#345#346#0" expanded="false" />
+                    <element signature="e#398#399#0" expanded="false" />
+                    <element signature="e#2606#2607#0" expanded="false" />
+                    <element signature="e#2644#2645#0" expanded="false" />
+                    <element signature="e#2686#2687#0" expanded="false" />
+                    <element signature="e#2738#2739#0" expanded="false" />
+                    <element signature="e#2769#2770#0" expanded="false" />
+                    <element signature="e#2817#2818#0" expanded="false" />
+                    <element signature="e#3672#3673#0" expanded="false" />
+                    <element signature="e#3717#3718#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -109,7 +128,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
                   <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -133,7 +154,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
                   <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -141,8 +164,8 @@
           <file leaf-file-name="TttApiTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/TttApiTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="382">
-                  <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+                <state relative-caret-position="313">
+                  <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -153,8 +176,8 @@
           <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-872">
-                  <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+                <state relative-caret-position="-774">
+                  <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -165,7 +188,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
                   <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -185,7 +210,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
                   <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -195,7 +222,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1005">
                   <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -205,7 +234,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
                   <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -215,7 +246,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
                   <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -266,16 +299,16 @@
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StrategyEasyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/StrategyHardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/StrategyHard.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Board.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/ApiTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Api.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/TttApiTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java" />
       </list>
     </option>
   </component>
@@ -489,7 +522,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.eighthlight.kkotowski.ttt in kkotowski.ttt">
+  <component name="RunManager" selected="JUnit.TttApiTest.getEndgame">
     <configuration default="false" name="TttApiTest.getEndgame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -588,7 +621,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="TttApiTest.startGameGetStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="GameTest.getTurnRecommendationHuman" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.eighthlight.kkotowski.ttt.*" />
@@ -599,8 +632,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.eighthlight.kkotowski.ttt" />
-      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.TttApiTest" />
-      <option name="METHOD_NAME" value="startGameGetStatus" />
+      <option name="MAIN_CLASS_NAME" value="com.eighthlight.kkotowski.ttt.GameTest" />
+      <option name="METHOD_NAME" value="getTurnRecommendationHuman" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -911,15 +944,15 @@
       <item index="1" class="java.lang.String" itemvalue="JUnit.TttApiTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.com.eighthlight.kkotowski.ttt in kkotowski.ttt" />
       <item index="3" class="java.lang.String" itemvalue="Application.App" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TttApiTest.startGameGetStatus" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GameTest.getTurnRecommendationHuman" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.App" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.com.eighthlight.kkotowski.ttt in kkotowski.ttt" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TttApiTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TttApiTest.getEndgame" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TttApiTest.startGameGetStatus" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TttApiTest.getEndgame" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TttApiTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.com.eighthlight.kkotowski.ttt in kkotowski.ttt" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest.getTurnRecommendationHuman" />
+        <item index="4" class="java.lang.String" itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -945,40 +978,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TttApiTest - 2016.06.16 at 11h 03m 15s.xml">
+    <history-entry file="TttApiTest - 2016.06.16 at 16h 08m 55s.xml">
       <configuration name="TttApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 11h 03m 29s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 11h 30m 53s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 12h 23m 01s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 12h 26m 10s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 12h 26m 12s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest - 2016.06.16 at 12h 27m 57s.xml">
-      <configuration name="TttApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 12h 24m 00s.xml">
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 15h 44m 34s.xml">
       <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_eighthlight_kkotowski_ttt_in_kkotowski_ttt - 2016.06.16 at 11h 31m 07s.xml">
-      <configuration name="com.eighthlight.kkotowski.ttt in kkotowski.ttt" configurationId="JUnit" />
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 15h 47m 47s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_eighthlight_kkotowski_ttt_in_kkotowski_ttt - 2016.06.16 at 12h 28m 17s.xml">
-      <configuration name="com.eighthlight.kkotowski.ttt in kkotowski.ttt" configurationId="JUnit" />
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 15h 58m 16s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 15h 58m 34s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 15h 59m 02s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 16h 05m 16s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 16h 05m 34s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 16h 05m 49s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TttApiTest_getEndgame - 2016.06.16 at 16h 09m 25s.xml">
+      <configuration name="TttApiTest.getEndgame" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1676" height="1027" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -989,7 +1022,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262032" sideWeight="0.49761337" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28983957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28983957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23806609" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -997,7 +1030,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36256686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36256686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1047,7 +1080,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1061,7 +1094,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,7 +1137,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,7 +1156,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,7 +1166,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,7 +1209,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1201,7 +1244,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,7 +1254,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,7 +1264,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1232,7 +1281,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,7 +1293,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1248,7 +1303,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#198#199#0" expanded="false" />
+            <element signature="e#243#244#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,7 +1322,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,7 +1332,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1280,7 +1342,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1288,7 +1352,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#345#346#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
+            <element signature="e#2606#2607#0" expanded="false" />
+            <element signature="e#2644#2645#0" expanded="false" />
+            <element signature="e#2686#2687#0" expanded="false" />
+            <element signature="e#2738#2739#0" expanded="false" />
+            <element signature="e#2769#2770#0" expanded="false" />
+            <element signature="e#2817#2818#0" expanded="false" />
+            <element signature="e#3672#3673#0" expanded="false" />
+            <element signature="e#3717#3718#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,14 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-872">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1332,26 +1399,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="-774">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="171" column="30" selection-start-line="171" selection-start-column="30" selection-end-line="171" selection-end-column="30" />
+        <state relative-caret-position="2205">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eighthlight/kkotowski/ttt/TttApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/eighthlight/kkotowski/ttt/TttApiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="313">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

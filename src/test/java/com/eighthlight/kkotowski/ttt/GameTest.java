@@ -84,7 +84,9 @@ public class GameTest {
     public void getTurnRecommendationHuman() throws Exception {
         Game game = new Game();
         game.start();
-        assertEquals("X", game.getTurnRecommendation());
+        assertEquals("", game.getTurnRecommendation());
+        game.move(8);
+        assertEquals("5", game.getTurnRecommendation());
     }
 
     @Test

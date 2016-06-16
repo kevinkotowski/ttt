@@ -10,11 +10,20 @@ public class TttApi {
         this.game = new Game();
     }
 
+//    public boolean isActive() {
+//        return this.game.isActive();
+//    }
+//
+//    public boolean isEndgame() {
+//        return (this.game.isActive() &&
+//                (game.getWinner() != Game.Winner.NONE));
+//    }
+
     public String getStatus() {
         String status;
         boolean active = game.isActive();
 
-        status = "active=" + active +"\n";
+        status = "active=" + String.valueOf(active) +"\n";
         status += "winner=" + game.getWinner().toString() +"\n";
         return status;
     }

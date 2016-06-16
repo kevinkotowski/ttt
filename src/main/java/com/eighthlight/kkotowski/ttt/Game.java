@@ -96,7 +96,7 @@ public class Game {
         String move;
 
         if ( player.getMode() == Player.Mode.HUMAN ) {
-            move = "X";
+            move = "";
         } else {
             move = Integer.toString( player.getStrategy().recommend(this.board) );
         }
@@ -156,23 +156,23 @@ public class Game {
         } else {
             winner = Winner.NONE;
         }
-
-        if (winner != Winner.NONE) {
-            this.setActive(false);
-        }
         return winner;
     }
 
     public String getWinnerPlayerName() {
         String name;
-        if (this.turn == null) {
-            name = "NONE";
-        } else {
-            if (this.getWinner() == Winner.PLAYER1) {
+        switch (this.getWinner()) {
+            case NONE:
+                name = "No winner, yet.";
+                break;
+            case PLAYER1:
                 name = this.players.get(0).getName();
-            } else {
+                break;
+            case PLAYER2:
                 name = this.players.get(1).getName();
-            }
+                break;
+            default:
+                name = "Draw, no winner!";
         }
         return name;
     }
